@@ -242,6 +242,12 @@ footer p{max-width:74ch;margin-bottom:.7em}
   footer .wrap{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+/* cast cards: light */
+.card{background:var(--cream);border-color:var(--ink);box-shadow:0 6px 0 rgba(0,0,0,.35)}
+.card h3{color:var(--night)}
+.card .role{color:var(--purple)}
+.card p{color:#4a3a68}
 </style>
 </head>
 <body>
@@ -255,7 +261,6 @@ footer p{max-width:74ch;margin-bottom:.7em}
       <li><a href="#rise">Rise</a></li>
       <li><a href="#meet">Grim Jr.</a></li>
       <li><a href="#story">Story</a></li>
-      <li><a href="#cast">Cast</a></li>
       <li><a href="#screens">Screens</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -322,7 +327,6 @@ footer p{max-width:74ch;margin-bottom:.7em}
     </ol>
     <div class="memos">
       <div class="memo"><p class="from">From: HR · Re: Welcome aboard</p><p>HR is delighted to have you. Please find enclosed your signing bonus. Do not spend it on the vending machine. It is haunted.</p></div>
-      <div class="memo"><p class="from">From: HR · Re: Your father</p><p>Still out. The note says five minutes. We have no reason to doubt the note. We have laminated the note.</p></div>
       <div class="memo"><p class="from">From: Management · Commendation (form 12-B)</p><p>The backlog is cleared. A replacement backlog has been ordered. Well done.</p></div>
     </div>
   </div>
@@ -433,30 +437,6 @@ footer p{max-width:74ch;margin-bottom:.7em}
   </div>
 </section>
 
-<section class="s-night" id="cast">
-  <div class="notch" style="--c:var(--ink)"></div>
-  <div class="wrap">
-    <span class="eyebrow">Staff &amp; clients</span>
-    <h2>Everyone else has a reason not to work.</h2>
-    <div class="cards">
-      <article class="card"><div class="im"><img src="assets/npc_goblin.png" width="285" height="331" alt="A green goblin in an apron" loading="lazy"></div><h3>The Coffee Goblins</h3><div class="role">Breakroom</div><p>Run the only room that works. Out of cups. Out of milk.</p></article>
-      <article class="card"><div class="im"><img src="assets/npc_smith.png" width="276" height="322" alt="A skull-faced smith with a red bandana and a hammer" loading="lazy"></div><h3>The Smith</h3><div class="role">Bone Forge</div><p>Says nothing. Fixes everything.</p></article>
-      <article class="card"><div class="im"><img src="assets/emo_pony.png" width="220" height="163" alt="A small skeletal pony with a saddle" loading="lazy"></div><h3>Mini Skeletal Pony</h3><div class="role">Company transport, stabled</div><p>Off duty for now. Still eats paperwork.</p></article>
-      <article class="card"><div class="im"><img src="assets/npc_knight.png" width="262" height="295" alt="A tired knight sitting against a gravestone" loading="lazy"></div><h3>The Weary Vanguard</h3><div class="role">Client, homesick</div><p>Misses his family. The form says reap. You have two buttons.</p></article>
-      <article class="card"><div class="im"><img src="assets/mob_karenSlime.png" width="280" height="273" alt="A green slime with blonde hair and sunglasses, frowning" loading="lazy"></div><h3>The Demanding Customer</h3><div class="role">Client, loud</div><p>Would like to speak to whoever is in charge of death.</p></article>
-      <article class="card"><div class="im"><img src="assets/mob_wisp.png" width="230" height="278" alt="A small mint-green ghost flame in a scarf" loading="lazy"></div><h3>The Nervous Wisp</h3><div class="role">Client, anxious</div><p>Scared of being reaped. Also of being spared.</p></article><article class="card"><div class="im" style="font-family:var(--head);font-size:64px;color:var(--edge)">?</div><h3>Big Brother Ogre</h3><div class="role">Day 35</div><p>His little brother was asleep on a chest. This one is awake.</p></article>
-      <article class="card"><div class="im"><img src="assets/mob_paladin.png" width="313" height="350" alt="A gold-armoured paladin holding a sign that says Do Not Reap" loading="lazy"></div><h3>The Cursed Paladin</h3><div class="role">Client, refusing</div><p>Blocks the chapel door with a sign. That is not how signs work.</p></article>
-      <article class="card"><div class="im"><img src="assets/mob_taxKnight.png" width="297" height="350" alt="A round armoured knight holding a ledger" loading="lazy"></div><h3>The Tax Knight</h3><div class="role">Client, auditing</div><p>Has found a discrepancy in the graveyard. It is you.</p></article>
-      <article class="card"><div class="im" style="font-family:var(--head);font-size:64px;color:var(--edge)">?</div><h3>The Bone Captain</h3><div class="role">Day 50</div><p>Has guarded this crypt for six hundred years. Nobody has told him why.</p></article>
-      <article class="card"><div class="im"><img src="assets/npc_ectoPup.png" width="298" height="282" alt="A mint-green ghost puppy" loading="lazy"></div><h3>The Ecto-Pup</h3><div class="role">Character test</div><p>You know what the right answer is.</p></article>
-      <article class="card"><div class="im"><img src="assets/mob_pendulum.png" width="271" height="350" alt="A grandfather clock with an angry face and a robe" loading="lazy"></div><h3>Director Pendulum</h3><div class="role">Management</div><p>A clock that will not let anyone clock out.</p></article>
-      <article class="card"><div class="im"><img src="assets/mount_dragon.png" width="360" height="168" alt="A small flying dragon made of bone, with purple wings and a glowing green eye" loading="lazy"></div><h3>Dad's dragon</h3><div class="role">Executive vehicle</div><p>The Ossuary Skydrake. Under a dust sheet in the stable. He is not allowed. Yet.</p></article>
-      <article class="card"><div class="im"><img src="assets/emo_stamp.png" width="182" height="220" alt="A rubber stamp" loading="lazy"></div><h3>Death</h3><div class="role">Dad</div><p>Out. Getting milk. Back in 5 minutes.</p></article>
-      <article class="card"><div class="im"><img src="assets/emo_coffee.png" width="220" height="194" alt="A mug of coffee" loading="lazy"></div><h3>HR</h3><div class="role">A department, not a person</div><p>Delighted to have you. Has never been found.</p></article>
-    </div>
-  </div>
-</section>
-
 <section class="s-ink" id="screens">
   <div class="notch" style="--c:var(--night)"></div>
   <div class="wrap">
@@ -470,17 +450,6 @@ footer p{max-width:74ch;margin-bottom:.7em}
       <figure><img src="assets/game-forge.png" width="390" height="844" alt="The Bone Forge: Grim Jr. with his gear slots and stats" loading="lazy"><figcaption>Forge and train</figcaption></figure>
       <figure><img src="assets/game-sanctum.png" width="390" height="844" alt="The Soul Sanctum with three jars and the fusion pedestal" loading="lazy"><figcaption>Collect spirits</figcaption></figure>
       <figure><img src="assets/game-spring.png" width="390" height="844" alt="Grim Jr. soaking in a glowing green hot spring" loading="lazy"><figcaption>Breaks are permitted</figcaption></figure>
-    </div>
-    <h3 style="margin-top:50px;font-size:26px;text-align:center">Office supplies</h3>
-    <div class="stickers" aria-label="Stickers">
-      <img src="assets/emo_peek.png" width="220" height="111" alt="Grim Jr. peeking" loading="lazy">
-      <img src="assets/emo_donotreap.png" width="158" height="220" alt="A sign reading Do Not Reap" loading="lazy">
-      <img src="assets/emo_reap.png" width="217" height="220" alt="Reap button: a skull on purple" loading="lazy">
-      <img src="assets/emo_spare.png" width="217" height="220" alt="Spare button: a crown on gold" loading="lazy">
-      <img src="assets/emo_lantern.png" width="155" height="220" alt="The soul lantern" loading="lazy">
-      <img src="assets/emo_salute.png" width="169" height="220" alt="Grim Jr. saluting" loading="lazy">
-      <img src="assets/emo_hop.png" width="203" height="220" alt="Grim Jr. mid-hop" loading="lazy">
-      <img src="assets/emo_spring.png" width="220" height="184" alt="Grim Jr. in the hot spring" loading="lazy">
     </div>
   </div>
 </section>
