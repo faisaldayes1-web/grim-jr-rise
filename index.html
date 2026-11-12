@@ -11,7 +11,7 @@
 <!-- Hosting plan: under orynn.io through the ORY website pipeline (see HOSTING.md).
      Social preview: set og:image and og:url to full web addresses once the address exists. -->
 <meta property="og:title" content="Grim Jr. Rise!">
-<meta property="og:description" content="Death went out for milk. His son got the job.">
+<meta property="og:description" content="Death is a deadbeat. He went out for milk and never came back. Now it is up to Grim Jr.">
 <!-- Site by claude-faisallaptop/grim-jr-brand. Public version, 11 November 2026.
      Layout (11 Nov 2026, Faisal): a short official landing page: three tabs, big key art with the logo and store buttons,
      a sign-up section with a row of rewards, a features carousel, a slim footer. Structure only is borrowed from the
@@ -77,6 +77,68 @@ p{margin:0 0 1em}
 .film{max-width:860px;margin:0 auto;border:5px solid var(--ink);outline:4px solid var(--teal);border-radius:24px;overflow:hidden;background:var(--night);line-height:0}
 .film video{width:100%;height:auto;display:block}
 
+/* story */
+.story{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start;text-align:left;max-width:940px;margin:26px auto 0}
+.story-text p{font-size:17.5px;color:#4a3a68;margin:0 0 1em}
+.story-text b{color:var(--night)}
+.story-pic{margin:0}
+.story-pic img{border:5px solid var(--ink);outline:4px solid var(--teal);border-radius:22px;width:100%}
+.story-pic figcaption{font-size:14px;color:#6a5a88;margin-top:10px;text-align:center}
+/* the game */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;list-style:none;padding:0;margin:4px 0 0}
+.chips li{border:3px solid var(--ink);background:var(--cream);border-radius:999px;padding:4px 14px;font-size:14px;color:var(--night)}
+.sub{font-size:26px;color:var(--night);margin:44px 0 18px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;list-style:none;padding:0;margin:0;counter-reset:s;text-align:left}
+.steps li{background:var(--cream);border:4px solid var(--ink);border-radius:18px;padding:22px 14px 14px;position:relative;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;top:-16px;left:12px;width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-family:var(--head);transform:rotate(-4deg)}
+.steps b,.grow b{display:block;font-family:var(--head);font-weight:700;font-size:19px;color:var(--purple);margin-bottom:4px}
+.steps span,.grow span{font-size:14.5px;line-height:1.4;color:#4a3a68}
+.grow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;list-style:none;padding:0;margin:0;text-align:left}
+.grow li{background:var(--cream);border:4px solid var(--ink);border-radius:18px;padding:14px}
+.grow img{height:96px;width:auto;margin:0 auto 10px}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}.grow{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.story{grid-template-columns:1fr;gap:22px}.steps,.grow{grid-template-columns:1fr}.steps li{padding-top:20px}
+  .tabs a{font-size:15px;padding:6px 8px}}
+
+/* intro strip under the key art */
+.intro{background:var(--paper);background-image:radial-gradient(rgba(91,47,184,.07) 2px,transparent 2.5px);background-size:26px 26px;text-align:center;padding:34px 0 10px}
+.soon{display:inline-block;font-family:var(--head);font-size:clamp(24px,4.6vw,40px);color:var(--cream);background:var(--coral);border:5px solid var(--ink);border-radius:16px;padding:6px 26px 8px;transform:rotate(-1.5deg);box-shadow:0 7px 0 var(--ink);margin:0 0 18px;-webkit-text-stroke:1px var(--ink);text-shadow:0 3px 0 var(--ink)}
+.intro-line{max-width:56ch;margin:0 auto 22px;color:#4a3a68;font-size:clamp(16px,2.3vw,19px)}
+.jump{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto}
+.jump a{display:block;text-decoration:none;background:var(--purple);border:4px solid var(--ink);border-radius:18px;padding:14px 10px 12px;box-shadow:0 6px 0 var(--night),0 6px 0 4px var(--ink)}
+.jump a:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--night),0 4px 0 4px var(--ink)}
+.jump b{display:block;font-family:var(--head);font-weight:700;font-size:24px;color:var(--gold);-webkit-text-stroke:.6px var(--ink)}
+.jump span{display:block;font-size:13.5px;color:var(--lilac);margin-top:2px}
+.down{display:inline-grid;place-items:center;width:52px;height:52px;margin:22px auto 0;border-radius:50%;background:var(--mint);border:4px solid var(--ink);box-shadow:0 5px 0 var(--teal),0 5px 0 4px var(--ink);animation:bob 1.6s ease-in-out infinite}
+.down svg{width:26px;height:26px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+/* cast */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-top:26px;text-align:center}
+.card{background:var(--cream);border:4px solid var(--ink);border-radius:20px;padding:14px 12px 16px}
+.card .im{height:130px;display:grid;place-items:center;margin-bottom:8px}
+.card .im img{max-height:130px;width:auto}
+.card h3{font-size:19px;color:var(--night);margin-bottom:2px}
+.card .role{font-size:12px;color:var(--purple);text-transform:uppercase;letter-spacing:.07em;font-weight:900;margin-bottom:6px}
+.card p{font-size:14px;line-height:1.4;color:#4a3a68;margin:0}
+/* questions */
+.faq{max-width:760px;margin:24px auto 0;text-align:left}
+.faq details{background:var(--cream);border:4px solid var(--ink);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:14px 52px 14px 18px;font-family:var(--head);font-size:18px;color:var(--night);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:14px;top:10px;width:30px;height:30px;border-radius:9px;background:var(--mint);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"\2013";background:var(--gold)}
+.faq details p{padding:0 18px 14px;margin:0;color:#4a3a68;font-size:15.5px}
+.faq a{color:var(--purple)}
+@media (max-width:760px){
+  .jump{grid-template-columns:1fr;max-width:340px;gap:12px}
+  .cards{grid-template-columns:repeat(2,1fr);gap:10px}
+  .card{padding:10px 8px 12px}.card .im{height:96px}.card .im img{max-height:96px}.card h3{font-size:16px}.card p{font-size:13px}
+  .tabs{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding:0 6px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs a{flex:0 0 auto;font-size:15px;padding:6px 9px}
+}
+@media (prefers-reduced-motion:reduce){.down{animation:none}}
+
 /* featured reward card */
 .feature-card{position:relative;max-width:680px;margin:30px auto 0;border:5px solid var(--ink);outline:4px solid var(--teal);border-radius:22px;background:radial-gradient(circle at 50% 70%,#4a2a86 0 40%,var(--night) 75%);padding:34px 20px 14px;overflow:hidden}
 .feature-card img{height:230px;width:auto;margin:0 auto 6px}
@@ -92,6 +154,9 @@ p{margin:0 0 1em}
 .slip:nth-child(odd){transform:rotate(-2deg)} .slip:nth-child(even){transform:rotate(1.5deg)}
 .slip img{height:84px;width:auto;margin:0 auto 10px}
 .slip span{display:block;font-size:14px;font-weight:900;color:var(--cream);background:var(--purple);border-radius:8px;padding:4px 4px}
+.slip p{margin:8px 2px 2px;font-size:12.5px;line-height:1.35;color:#4a3a68}
+.kit-intro{max-width:600px;margin:30px auto 0;font-size:16px;color:#4a3a68}
+.kit-intro b{color:var(--night)}
 
 /* sign-up box */
 .signup{max-width:560px;margin:46px auto 0;background:var(--cream);border:4px dashed var(--purple);border-radius:22px;padding:22px 18px 16px}
@@ -99,7 +164,8 @@ p{margin:0 0 1em}
 .signup p{font-size:15px;color:#4a3a68;margin:0 0 12px}
 .signup .form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:10px}
 .signup input{flex:1 1 220px;min-width:0;font:inherit;padding:11px 14px;border-radius:12px;border:4px solid var(--ink);background:#fff;color:var(--ink)}
-.signup button{font-family:var(--head);font-size:17px;border:4px solid var(--ink);border-radius:12px;padding:11px 18px;background:#b9aed0;color:#4a3a68;cursor:not-allowed}
+.signup .go-form{display:inline-block;font-family:var(--head);font-size:20px;text-decoration:none;color:var(--ink);background:var(--mint);border:4px solid var(--ink);border-radius:16px;padding:11px 26px;box-shadow:0 6px 0 var(--teal),0 6px 0 4px var(--ink)}
+.signup .go-form:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--teal),0 4px 0 4px var(--ink)}
 .note{font-size:13px;color:#6a5a88;margin:0}
 
 /* small characters standing about in the margins */
@@ -151,6 +217,221 @@ footer p{margin:0 0 4px}
   .arrow{width:46px;height:46px;border-radius:13px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.shot{transition:none}}
+/* ===== original page, scoped ===== */
+.og *{box-sizing:border-box}
+.og{scroll-behavior:smooth;scroll-padding-top:70px}
+.og{margin:0;background:var(--ink);color:var(--cream);font-family:var(--body);font-weight:700;font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+.og img{max-width:100%;height:auto;display:block}
+.og a{color:var(--mint)}
+.og h1,.og h2,.og h3{font-family:var(--head);font-weight:700;line-height:1.08;margin:0;text-wrap:balance}
+.og p{margin:0 0 1em}
+.og .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.og section{padding:68px 0;position:relative}
+.og .eyebrow{display:inline-block;font-family:var(--head);letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--ink);background:var(--gold);border:3px solid var(--ink);border-radius:9px;padding:2px 11px;margin-bottom:14px;transform:rotate(-3deg)}
+.og h2{font-size:clamp(30px,6vw,46px);margin-bottom:18px}
+.og .lede{font-size:clamp(18px,2.6vw,21px);color:var(--lilac);max-width:62ch}
+.og .note{font-size:13.5px;color:#a892cf}
+.og .skip{position:absolute;left:-999px}
+.og .skip:focus{left:10px;top:10px;z-index:99;background:var(--cream);color:var(--ink);padding:8px 12px;border-radius:8px}
+.og :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.og .s-night{background:var(--night)}
+.og .s-ink{background:var(--ink)}
+.og .s-deep{background:var(--deep)}
+.og .notch{position:absolute;left:0;right:0;top:0;height:14px;pointer-events:none;background:radial-gradient(circle at 14px 0,var(--c) 13.2px,transparent 14px) 0 0/28px 14px repeat-x}
+.og .draft{background:var(--gold);color:var(--ink);text-align:center;font-size:13px;font-weight:900;padding:6px 12px;border-bottom:3px solid var(--ink)}
+.og .nav{position:sticky;top:0;z-index:20;background:rgba(27,16,48,.94);border-bottom:3px solid var(--edge)}
+.og .nav .wrap{display:flex;align-items:center;gap:18px;height:58px}
+.og .brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-size:19px;color:var(--cream);text-decoration:none;white-space:nowrap}
+.og .brand img{width:36px;height:36px;border-radius:10px;border:2px solid var(--ink)}
+.og .nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0}
+.og .nav ul a{display:block;padding:8px 11px;border-radius:10px;color:var(--lilac);text-decoration:none;font-size:15px}
+.og .nav ul a:hover{background:var(--edge);color:var(--cream)}
+.og .nav .btn{font-size:15px;padding:6px 14px;border-width:3px;border-radius:12px;box-shadow:0 4px 0 var(--teal),0 4px 0 3px var(--ink);margin-bottom:4px}
+.og .btn{display:inline-block;font-family:var(--head);font-size:20px;text-decoration:none;color:var(--ink);background:var(--mint);
+  border:4px solid var(--ink);border-radius:18px;padding:12px 26px;box-shadow:0 6px 0 var(--teal),0 6px 0 4px var(--ink);transition:transform .08s,box-shadow .08s}
+.og .btn:hover,.og .btn:focus-visible{transform:translateY(2px);box-shadow:0 4px 0 var(--teal),0 4px 0 4px var(--ink)}
+.og .btn.ghost{background:var(--violet);color:var(--cream);box-shadow:0 6px 0 var(--purple),0 6px 0 4px var(--ink)}
+.og .btn.ghost:hover{box-shadow:0 4px 0 var(--purple),0 4px 0 4px var(--ink)}
+.og .hero{position:relative;background:#2a1650;line-height:0;overflow:hidden}
+.og .hero picture img{width:100%;max-height:86vh;object-fit:cover;object-position:50% 46%}
+.og .hero .logo{position:absolute;left:3.5%;top:5%;width:min(27%,380px);margin:0;filter:drop-shadow(0 8px 0 rgba(27,16,48,.45))}
+.og .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,transparent,var(--night))}
+.og .pitch{background:var(--night);text-align:center;padding:10px 0 62px}
+.og .tag{font-family:var(--head);font-size:clamp(25px,4.6vw,42px);line-height:1.14;margin-bottom:14px}
+.og .pitch .lede{margin:0 auto 26px}
+.og .cta{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.og .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;list-style:none;padding:0;margin:30px 0 0}
+.og .chips li{border:3px solid var(--edge);background:var(--ink);border-radius:999px;padding:5px 14px;font-size:14px;color:var(--lilac)}
+.og .trailer .frame{position:relative;max-width:860px;margin:26px auto 0;border:5px solid var(--ink);outline:4px solid var(--edge);border-radius:26px;overflow:hidden;background:var(--night)}
+.og .trailer .frame img{width:100%;opacity:.55}
+.og .trailer .play{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.og .trailer .play span{display:block}
+.og .trailer .tri{width:86px;height:86px;border-radius:50%;background:var(--cream);border:5px solid var(--ink);box-shadow:0 7px 0 var(--bone),0 7px 0 5px var(--ink);margin:0 auto 16px;position:relative}
+.og .trailer .tri::after{content:"";position:absolute;left:33px;top:23px;border:20px solid transparent;border-left:30px solid var(--ink);border-right:0}
+.og .placeholder{display:inline-block;background:var(--gold);color:var(--ink);font-size:12.5px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:8px;border:3px solid var(--ink);transform:rotate(-2deg)}
+.og .theme{display:flex;align-items:center;gap:18px;max-width:640px;margin:34px auto 0;text-align:left;background:var(--night);border:4px solid var(--edge);border-radius:22px;padding:16px 20px}
+.og .theme img{width:92px;flex:0 0 auto;transform:rotate(-4deg)}
+.og .theme h3{font-size:21px;color:var(--mint);margin-bottom:2px}
+.og .theme p{margin:0 0 10px;font-size:15px;color:var(--lilac)}
+.og .theme audio{width:100%;height:40px}
+.og .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:34px 0 0;padding:0;list-style:none;counter-reset:s}
+.og .steps li{background:var(--ink);border:4px solid var(--edge);border-radius:20px;padding:22px 18px 16px;counter-increment:s;position:relative}
+.og .steps li::before{content:counter(s);position:absolute;top:-16px;left:16px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-family:var(--head);transform:rotate(-4deg)}
+.og .steps h3{font-size:21px;margin:6px 0 6px;color:var(--mint)}
+.og .steps p{margin:0;font-size:15.5px;color:var(--lilac)}
+.og .memo{background:var(--cream);color:var(--ink);border:4px solid var(--ink);border-bottom:0;border-radius:8px 8px 0 0;padding:20px 22px 12px;position:relative;margin-bottom:14px;filter:drop-shadow(7px 9px 0 rgba(0,0,0,.32))}
+.og .memo::after{content:"";position:absolute;left:-4px;right:-4px;bottom:-14px;height:14px;background:radial-gradient(circle at 12px 0,var(--cream) 9.5px,var(--ink) 10px,var(--ink) 13.4px,transparent 14px) 0 0/24px 14px repeat-x}
+.og .memo::before{content:"MEMO";position:absolute;top:-15px;left:18px;background:var(--coral);color:var(--cream);font-family:var(--head);font-size:13px;letter-spacing:.14em;padding:3px 12px;border:3px solid var(--ink);border-radius:8px;transform:rotate(-3deg)}
+.og .memo p{margin:0 0 .5em}
+.og .memo .from{font-size:13px;color:#5a4a78;text-transform:uppercase;letter-spacing:.08em;font-weight:900}
+.og .memos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:34px 24px;margin-top:40px;align-items:start}
+.og .memos .memo:nth-child(2){transform:rotate(1.2deg)}
+.og .memos .memo:nth-child(3){transform:rotate(-1deg)}
+.og .rise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.og .tile{background:var(--night);border:4px solid var(--edge);border-radius:22px;padding:18px 18px 20px;display:flex;flex-direction:column}
+.og .tile .row{display:flex;align-items:flex-end;justify-content:center;gap:6px;height:128px;margin-bottom:12px}
+.og .tile .row img{max-height:128px;width:auto;min-width:0;flex:0 1 auto}
+.og .tile h3{font-size:22px;color:var(--mint);margin-bottom:6px}
+.og .tile p{font-size:15.5px;color:var(--lilac);margin:0}
+.og .tile .n{font-family:var(--head);color:var(--gold);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.og .ladder{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 14px;margin:36px 0 0;padding:0;list-style:none;font-family:var(--head)}
+.og .ladder li{border:4px solid var(--ink);border-radius:14px;padding:8px 16px;background:var(--violet);box-shadow:0 5px 0 var(--purple),0 5px 0 4px var(--ink)}
+.og .ladder li:first-child{background:var(--bone);color:var(--ink);box-shadow:0 5px 0 #c9b998,0 5px 0 4px var(--ink)}
+.og .ladder li:last-child{background:var(--gold);color:var(--ink);box-shadow:0 5px 0 var(--amber),0 5px 0 4px var(--ink)}
+.og .ladder .arrow{border:0;background:none;box-shadow:none;padding:0;color:var(--lilac)}
+.og .meet .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.og .meet .pic{justify-self:center;background:radial-gradient(circle at 50% 60%,#4a2a86 0 55%,transparent 56%);padding:10px}
+.og .meet .pic img{width:min(300px,62vw)}
+.og .file{list-style:none;padding:0;margin:20px 0 0;border:4px solid var(--edge);border-radius:18px;overflow:hidden}
+.og .file li{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:11px 16px;background:var(--night)}
+.og .file li:nth-child(even){background:var(--deep)}
+.og .file b{color:var(--gold);font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.og .moods{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px}
+.og .moods figure{margin:0;text-align:center;background:var(--night);border:4px solid var(--edge);border-radius:18px;padding:14px 8px 10px}
+.og .moods img{height:74px;width:auto;margin:0 auto 8px}
+.og .moods figcaption{font-size:13.5px;color:var(--lilac)}
+.og .moods-title{margin-top:44px;font-size:24px}
+.og .story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start;margin-top:10px}
+.og .story-grid p{color:var(--lilac);font-size:18px}
+.og .story-grid p b{color:var(--cream)}
+.og .sticky{background:var(--gold);color:var(--ink);border:4px solid var(--ink);border-radius:6px 6px 22px 6px;padding:16px 18px;font-family:var(--head);font-size:17px;line-height:1.3;text-transform:uppercase;letter-spacing:.03em;box-shadow:6px 7px 0 rgba(0,0,0,.3);transform:rotate(2.5deg);max-width:300px}
+.og .sticky + .sticky{transform:rotate(-3deg);margin:22px 0 0 40px}
+.og .sticky small{display:block;font-family:var(--body);font-weight:900;text-transform:none;letter-spacing:0;font-size:12.5px;margin-top:8px;color:#5c4310}
+.og .doorpic{margin:0 0 26px}
+.og .doorpic img{border:5px solid var(--ink);outline:4px solid var(--edge);border-radius:22px;width:100%}
+.og .doorpic figcaption{font-size:14px;color:var(--lilac);margin-top:10px;text-align:center}
+.og .chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.og .chapter{border:4px solid var(--edge);border-radius:22px;overflow:hidden;background:var(--ink)}
+.og .chapter .im{aspect-ratio:3/2;background:var(--deep) center/cover;position:relative}
+.og .chapter .num{position:absolute;left:12px;top:12px;width:42px;height:42px;border-radius:12px;background:var(--mint);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-family:var(--head);font-size:22px;box-shadow:0 4px 0 var(--teal),0 4px 0 3px var(--ink);transform:rotate(-3deg)}
+.og .chapter .body{padding:16px 18px 18px}
+.og .chapter h3{font-size:21px;margin-bottom:4px}
+.og .chapter .days{font-size:12.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:900;margin-bottom:8px}
+.og .chapter p{font-size:15px;color:var(--lilac);margin:0}
+.og .chapter.locked .im{display:grid;place-items:center;font-family:var(--head);font-size:70px;color:var(--edge)}
+.og .chapter.locked .num{background:var(--edge);color:var(--lilac);box-shadow:0 4px 0 #2a1a47,0 4px 0 3px var(--ink)}
+.og .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:28px}
+.og .card{background:var(--ink);border:4px solid var(--edge);border-radius:22px;padding:16px 16px 18px;text-align:center}
+.og .card .im{height:150px;display:grid;place-items:center;margin-bottom:8px}
+.og .card .im img{max-height:150px;width:auto}
+.og .card h3{font-size:21px;margin-bottom:2px}
+.og .card .role{font-size:12.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:900;margin-bottom:8px}
+.og .card p{font-size:15px;color:var(--lilac);margin:0}
+.og .card.locked .im img{filter:brightness(0) opacity(.55) drop-shadow(0 0 10px var(--mint))}
+.og .shots{display:flex;gap:18px;overflow-x:auto;padding:8px 20px 22px;margin:26px -20px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.og .shots figure{flex:0 0 auto;margin:0;scroll-snap-align:center;width:240px}
+.og .shots figure.wide{width:340px}
+.og .shots img{border:5px solid var(--ink);outline:3px solid var(--edge);border-radius:22px;width:100%;background:var(--night)}
+.og .shots figcaption{font-size:14px;color:var(--lilac);margin-top:10px;text-align:center}
+.og .stickers{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 26px;margin-top:30px}
+.og .stickers img{height:96px;width:auto;filter:drop-shadow(4px 5px 0 rgba(0,0,0,.3))}
+.og .stickers img:nth-child(odd){transform:rotate(-4deg)}
+.og .stickers img:nth-child(even){transform:rotate(3deg)}
+.og .faq{max-width:780px;margin:26px auto 0}
+.og .faq details{border:4px solid var(--edge);border-radius:18px;background:var(--night);margin-bottom:12px;overflow:hidden}
+.og .faq summary{cursor:pointer;list-style:none;padding:16px 52px 16px 20px;font-family:var(--head);font-size:19px;position:relative}
+.og .faq summary::-webkit-details-marker{display:none}
+.og .faq summary::after{content:"+";position:absolute;right:16px;top:11px;width:30px;height:30px;border-radius:9px;background:var(--mint);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-size:22px;line-height:1}
+.og .faq details[open] summary::after{content:"–";background:var(--gold)}
+.og .faq details p{padding:0 20px 16px;margin:0;color:var(--lilac)}
+.og .signup .box{background:var(--night);border:4px dashed var(--gold);border-radius:26px;padding:30px 24px;max-width:640px;margin:0 auto;text-align:center}
+.og .signup .form{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0 12px}
+.og .signup input{flex:1 1 230px;min-width:0;font:inherit;padding:12px 16px;border-radius:14px;border:4px solid var(--ink);background:var(--cream);color:var(--ink)}
+.og .signup .go-form{display:inline-block;font-family:var(--head);font-size:20px;text-decoration:none;color:var(--ink);background:var(--mint);border:4px solid var(--ink);border-radius:18px;padding:12px 26px;box-shadow:0 6px 0 var(--teal),0 6px 0 4px var(--ink)}
+.og .pills{list-style:none;display:flex;flex-wrap:wrap;gap:12px;padding:0;margin:22px 0 0}
+.og .pills li>*{display:flex;align-items:center;gap:8px;border:4px solid var(--edge);border-radius:14px;padding:10px 16px;background:var(--night);color:var(--lilac);text-decoration:none}
+.og .pills a:hover{border-color:var(--mint);color:var(--cream)}
+.og .pills em{font-style:normal;font-size:11.5px;background:var(--edge);color:var(--cream);border-radius:6px;padding:2px 7px;text-transform:uppercase;letter-spacing:.06em}
+.og .two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.og .two h2{font-size:clamp(26px,4.4vw,34px)}
+.og .facts{margin:18px 0 0;padding:0;list-style:none;color:var(--lilac);font-size:15.5px}
+.og .facts li{padding:6px 0;border-bottom:2px dashed var(--edge)}
+.og .facts b{color:var(--cream)}
+.og footer{background:var(--ink);border-top:4px solid var(--edge);padding:30px 0 50px;color:#a892cf;font-size:14px}
+.og footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+.og footer img{width:64px;border-radius:16px;border:3px solid var(--edge)}
+.og footer p{max-width:74ch;margin-bottom:.7em}
+@media (max-width:900px){.og .nav ul{display:none}
+.og .nav .btn{margin-left:auto}
+.og .rise-grid{grid-template-columns:repeat(2,1fr)}
+.og .chapters{grid-template-columns:1fr 1fr}
+.og .moods{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.og section{padding:52px 0}
+.og .hero picture img{max-height:none}
+.og .hero .logo{width:56%;left:22%;top:2.5%}
+.og .hero::after{height:12%}
+.og .pitch{padding-top:4px}
+.og .meet .wrap,.og .story-grid,.og .two{grid-template-columns:1fr}
+.og .file li{grid-template-columns:1fr;gap:0}
+.og .cards{grid-template-columns:repeat(2,1fr);gap:12px}
+.og .card{padding:12px 10px 14px}
+.og .card .im{height:112px}
+.og .card .im img{max-height:112px}
+.og .card h3{font-size:18px}
+.og .card p{font-size:14px}
+.og .memos .memo{transform:none!important}
+.og .rise-grid,.og .chapters{grid-template-columns:1fr}
+.og .tile .row{height:112px}
+.og .tile .row img{max-height:112px}
+.og .sticky + .sticky{margin-left:20px}
+.og .stickers img{height:74px}
+.og .brand span{display:none}
+.og .theme{flex-direction:column;text-align:center}
+.og footer .wrap{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.og{scroll-behavior:auto}
+.og .btn{transition:none}}
+
+.og{position:relative;padding-top:6px}
+.og-lip{height:22px;margin-top:-1px;background:radial-gradient(circle at 22px 0,var(--paper) 21px,transparent 22px) 0 0/44px 22px repeat-x}
+.og .pitch{padding-top:30px}
+.og section{scroll-margin-top:var(--navh)}
+
+/* round 2: shinier kit, ghostlier spirits */
+.slip{background:linear-gradient(180deg,#fffdf4,#f7e6b5)}
+.slip .tier{position:absolute;top:8px;right:8px;font-style:normal;font-size:10.5px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:linear-gradient(180deg,#ffe58a,#f6b93b);border:2px solid var(--ink);border-radius:6px;padding:1px 6px}
+.loot{position:relative;height:104px;display:grid;place-items:center;margin:4px 0 8px}
+.loot::before{content:"";position:absolute;width:104px;height:104px;border-radius:50%;background:radial-gradient(circle,rgba(255,236,150,.95) 0,rgba(246,196,69,.55) 38%,transparent 68%);animation:pulse 2.6s ease-in-out infinite}
+.loot::after{content:"\2726";position:absolute;right:14%;top:2px;font-size:18px;color:#fff;text-shadow:0 0 6px #ffd84d,0 0 12px #ffd84d;animation:twinkle 1.8s ease-in-out infinite}
+.loot img{position:relative;height:84px;width:auto;margin:0;filter:drop-shadow(0 0 4px #fff7cf) drop-shadow(0 0 10px rgba(246,196,69,.9)) saturate(1.15);animation:hover 3s ease-in-out infinite}
+.slip span{background:linear-gradient(180deg,#7b4ae0,#5B2FB8);box-shadow:inset 0 2px 0 rgba(255,255,255,.25)}
+@keyframes pulse{0%,100%{transform:scale(.9);opacity:.8}50%{transform:scale(1.06);opacity:1}}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.7) rotate(0)}50%{opacity:1;transform:scale(1.1) rotate(20deg)}}
+@keyframes hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.og .tile .row.spirits{position:relative}
+.og .tile .row.spirits::before{content:"";position:absolute;inset:-6px 0 0;background:radial-gradient(ellipse 45% 55% at 62% 70%,rgba(124,255,178,.30),transparent 70%),radial-gradient(ellipse 35% 45% at 85% 60%,rgba(201,162,255,.28),transparent 70%);filter:blur(6px);animation:smoke 5s ease-in-out infinite;pointer-events:none}
+.og .tile .row.spirits img.ghost{filter:drop-shadow(0 0 6px rgba(124,255,178,.95)) drop-shadow(0 -8px 14px rgba(124,255,178,.55)) saturate(.85) brightness(1.08);opacity:.92;animation:drift 4s ease-in-out infinite}
+.og .tile .row.spirits img.ghost + img.ghost{animation-delay:-2s}
+.og .tile .row.spirits img.jar{filter:drop-shadow(0 0 5px #fff1b3) drop-shadow(0 0 12px rgba(246,196,69,.85)) saturate(1.2) contrast(1.05)}
+@keyframes smoke{0%,100%{transform:translateY(0) scale(1);opacity:.75}50%{transform:translateY(-8px) scale(1.06);opacity:1}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.og .memos{grid-template-columns:repeat(2,minmax(0,1fr))}
+.og .memo-row{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-top:40px}
+.og .memo-row .memos{margin-top:0}
+.og .hr-desk{margin:0;text-align:center}
+.og .hr-desk img{height:230px;width:auto;margin:0 auto;filter:drop-shadow(6px 8px 0 rgba(0,0,0,.3))}
+.og .hr-desk figcaption{font-size:13px;color:var(--lilac);margin-top:6px}
+@media (max-width:760px){.og .memos{grid-template-columns:1fr}.og .memo-row{grid-template-columns:1fr}.og .hr-desk img{height:180px}}
+@media (prefers-reduced-motion:reduce){.loot::before,.loot::after,.loot img,.og .tile .row.spirits::before,.og .tile .row.spirits img.ghost{animation:none}}
 </style>
 </head>
 <body>
@@ -158,9 +439,10 @@ footer p{margin:0 0 4px}
 
 <nav class="tabs" aria-label="Sections">
   <a href="#home" class="on">Home</a>
-  <a href="#watch">Watch</a>
   <a href="#register">Sign up</a>
-  <a href="#features">Features</a>
+  <a href="#story">Story</a>
+  <a href="#cast">Cast</a>
+  <a href="#faq">Questions</a>
 </nav>
 
 <header class="hero" id="home">
@@ -188,16 +470,16 @@ footer p{margin:0 0 4px}
 
 <main>
 
-<section class="paper" id="watch" style="padding-bottom:26px">
+<section class="intro" id="intro">
   <div class="wrap">
-    <h2 class="plaque">Watch</h2>
-    <div class="film">
-      <video controls preload="none" playsinline poster="assets/back-in-5-poster.jpg" width="1280" height="720">
-        <source src="assets/back-in-5.mp4" type="video/mp4">
-        Your browser cannot play this video.
-      </video>
-    </div>
-    <p class="note" style="margin-top:14px">"Back in 5" · 45 seconds · plays from this page, nothing loads from another site.</p>
+    <p class="soon">Coming soon to iPhone and Android</p>
+    <p class="intro-line">Grim Jr. Rise! is not out yet. Sign up for the memo and you get one email on opening day, plus the opening-day kit.</p>
+    <nav class="jump" aria-label="Jump to">
+      <a href="#story"><b>Story</b><span>How Death's son got the job</span></a>
+      <a href="#cast"><b>Cast</b><span>Staff, clients and Dad</span></a>
+      <a href="#faq"><b>Questions</b><span>Release, price, the mouth</span></a>
+    </nav>
+    <a class="down" href="#story" aria-label="Scroll down to the story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l7 8 7-8" fill="none" stroke="#1B1030" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
@@ -209,8 +491,8 @@ footer p{margin:0 0 4px}
     <img class="walker w4" src="assets/emo_salute.png" width="169" height="220" alt="" loading="lazy">
 
     <h2 class="plaque">Sign up</h2>
-    <p class="tagline">Death went out for milk. His son got the job.</p>
-    <p class="lede">Dad said five minutes. That was a while ago. Pick up the scythe, collect souls, gear and spirits, come back stronger every shift, and rise.</p>
+    <p class="tagline">Death is a deadbeat.</p>
+    <p class="lede">He went out for milk and never came back. Now it is up to Grim Jr. Dad said five minutes. That was five hours ago.</p>
 
     <div class="card-holder">
       <span class="ribbon">Opening-day kit</span>
@@ -220,44 +502,298 @@ footer p{margin:0 0 4px}
       </div>
     </div>
 
-    <ul class="slips" aria-label="Opening-day kit, proposed">
-      <li class="slip"><img src="assets/icon_jar_gold.png" width="96" height="116" alt="" loading="lazy"><span>Soul jar</span></li>
-      <li class="slip"><img src="assets/relic_lantern.png" width="86" height="150" alt="" loading="lazy"><span>Relic lantern</span></li>
-      <li class="slip"><img src="assets/item_eq_au_cloak.png" width="121" height="150" alt="" loading="lazy"><span>Spare cloak</span></li>
-      <li class="slip"><img src="assets/trophy_mug.png" width="149" height="150" alt="" loading="lazy"><span>Staff mug</span></li>
+    <p class="kit-intro"><b>What is the opening-day kit?</b> Sign up for the memo before launch, and on opening day four things are waiting in Grim Jr.'s inbox to help a very new Death through his first shifts.</p>
+    <ul class="slips" aria-label="Opening-day kit">
+      <li class="slip"><em class="tier">Gilded</em><div class="loot"><img src="assets/icon_jar_gold.png" width="96" height="116" alt="" loading="lazy"></div><span>Soul Jar</span><p>Open it in the Sanctum to summon a spirit that fights beside him.</p></li>
+      <li class="slip"><em class="tier">Relic</em><div class="loot"><img src="assets/relic_lantern.png" width="86" height="150" alt="" loading="lazy"></div><span>Overtime Lantern</span><p>A relic. Owning it adds HP; equipped, it brings in more gold.</p></li>
+      <li class="slip"><em class="tier">Epic</em><div class="loot"><img src="assets/item_eq_au_cloak.png" width="121" height="150" alt="" loading="lazy"></div><span>Pinstripe Shroud</span><p>A cloak from the Infernal Audit set: more HP and defence.</p></li>
+      <li class="slip"><em class="tier">Trophy</em><div class="loot"><img src="assets/trophy_mug.png" width="149" height="150" alt="" loading="lazy"></div><span>Chipped Mug</span><p>A trophy for his shelf. Every star on it adds attack.</p></li>
     </ul>
     <p class="note" style="margin-top:18px">The opening-day kit may change before launch.</p>
 
     <div class="signup">
-      <span class="ph">Opening soon</span>
+      <span class="ph">One email, on opening day</span>
       <h3>Get the memo.</h3>
       <p>One email when the doors open. HR will not contact you about anything else. HR does not know how.</p>
-      <div class="form" role="group" aria-describedby="signup-note">
-        <input type="email" placeholder="you@example.com" aria-label="Email address (sign-ups are not open yet)" autocomplete="off">
-        <button type="button" disabled aria-disabled="true">Opening soon</button>
+      <div class="form">
+        <a class="go-form" href="https://docs.google.com/forms/d/e/1FAIpQLScKll5T-M6_H5ZXoYm8U1fTCPu1UxF6PqgE_CYEzqrWhvj8JQ/viewform" target="_blank" rel="noopener">Sign up for the memo</a>
       </div>
-      <p class="note" id="signup-note">Sign-ups are not open yet. Nothing you type here is saved or sent.</p>
+      <p class="note">Opens a short Google Form in a new tab. Your email is only used to tell you when the game opens.</p>
     </div>
   </div>
 </section>
 
-<section class="paper alt" id="features">
-  <h2 class="plaque">Features</h2>
-  <div class="carousel">
-    <button class="arrow prev" type="button" aria-label="Previous feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3L6 12l10 9z" fill="#1B1030"/></svg></button>
-    <div class="track" id="track" tabindex="0" aria-label="Features, scroll sideways">
-      <figure class="shot"><div class="im"><img src="assets/game-home.png" width="390" height="844" alt="The Breakroom: Grim Jr. in the middle, the coffee bar, the Sanctum, the Bone Forge and a Start Shift button" loading="lazy"></div><figcaption><h3>Clock in</h3><p>Start a shift from the Breakroom. He walks, the days tick by, and things start wanting a word.</p></figcaption></figure>
-      <figure class="shot"><div class="im"><img src="assets/game-shift.png" width="390" height="844" alt="Day 1 of a shift: Grim Jr. walking through a moonlit graveyard with his scythe, and the shift log underneath" loading="lazy"></div><figcaption><h3>One thumb. Big scythe.</h3><p>He walks and fights on his own. You decide what kind of Death he grows into.</p></figcaption></figure>
-      <figure class="shot"><div class="im"><img src="assets/game-skills.png" width="390" height="844" alt="A meeting with The Client Who Won't Die, with a grid of fifteen skills to pick from" loading="lazy"></div><figcaption><h3>Build a run</h3><p>Frost, shadow, bone, toxic or holy. Pick your skills and no two shifts play the same.</p></figcaption></figure>
-      <figure class="shot"><div class="im"><img src="assets/game-forge.png" width="390" height="844" alt="The Bone Forge: Grim Jr. with his gear slots, stats and the workshop rule" loading="lazy"></div><figcaption><h3>Forge and train</h3><p>You will lose. That is the plan. Forge, merge and train, then go back and win.</p></figcaption></figure>
-      <figure class="shot"><div class="im"><img src="assets/game-sanctum.png" width="390" height="844" alt="The Soul Sanctum with three jars and the fusion pedestal" loading="lazy"></div><figcaption><h3>Collect spirits</h3><p>Open jars in the Sanctum, fuse the spirits you find, and put the best ones on duty.</p></figcaption></figure>
-      <figure class="shot"><div class="im"><img src="assets/game-spring.png" width="390" height="844" alt="Grim Jr. soaking in a glowing green hot spring" loading="lazy"></div><figcaption><h3>Breaks are permitted</h3><p>Off the clock, the hot spring brews Soul Essence while he soaks.</p></figcaption></figure>
+<div class="og">
+<div class="og-lip" aria-hidden="true"></div>
+<div class="pitch">
+  <div class="wrap">
+    <p class="tag">Death is a deadbeat.<br>Now it is up to Grim Jr.</p>
+    <p class="lede">He went out for milk and never came back. Dad said five minutes. That was five hours ago. Pick up the scythe in a cute-spooky idle adventure roguelike: collect souls, gear, spirits and mounts, come back stronger every shift, and rise.</p>
+    <div class="cta">
+      <a class="btn" href="#register">Tell me when it opens</a>
+      <a class="btn ghost" href="#rise">How do I rise?</a>
     </div>
-    <button class="arrow next" type="button" aria-label="Next feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3l10 9-10 9z" fill="#1B1030"/></svg></button>
+    <ul class="chips" aria-label="At a glance">
+      <li>Idle roguelike</li><li>One-thumb play</li><li>Portrait</li><li>iPhone and Android</li><li>No mouth</li><li>No milk</li>
+    </ul>
   </div>
-  <p class="note">Screens from the build in development, captured 11 November 2026. Things will change.</p>
-  <p style="margin:22px 0 0"><a class="more" href="about.html">Story, cast and questions</a></p>
+</div>
+
+
+<section class="trailer s-ink">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow">Training video</span>
+    <h2>Watch the trailer.</h2>
+    <div class="frame">
+      <video controls preload="none" playsinline poster="assets/back-in-5-poster.jpg" width="1280" height="720" style="width:100%;height:auto;display:block;opacity:1"><source src="assets/back-in-5.mp4" type="video/mp4">Your browser cannot play this video.</video>
+    </div>
+    <p class="note" style="margin-top:14px">"Back in 5", the teaser. Dad said five minutes. That was five hours ago.</p>
+    <div class="theme">
+      <img src="assets/emo_grim.png" width="220" height="170" alt="" loading="lazy">
+      <div>
+        <h3>Meanwhile, the theme tune</h3>
+        <p>One minute. Starts as hold music. Does not stay that way.</p>
+        <audio controls preload="none" src="assets/grim-jr-rise-theme.mp3">Your browser cannot play this audio.</audio>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="s-night" id="game">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <span class="eyebrow">The job</span>
+    <h2>Somebody has to be Death.</h2>
+    <p class="lede">With Death at the shop, nobody has been reaping. The queue at the exit has stopped and the dead are getting comfortable. The scythe may only be held by a Grim. There is one other Grim. You are his thumb.</p>
+    <ol class="steps">
+      <li><h3>Clock in</h3><p>Start a shift from the Breakroom. He walks, the days tick by, and from Day 6 things start wanting a word.</p></li>
+      <li><h3>Build a run</h3><p>Draft skills as you level. Frost, shadow, bone, toxic or holy: no two shifts play the same.</p></li>
+      <li><h3>Reap or spare</h3><p>A knight who misses his family. A nervous wisp. A customer who wants the manager. The job says reap. It is your call.</p></li>
+      <li><h3>Hit the wall</h3><p>Around Day 35 something much bigger than him is waiting. You will lose. That is the plan.</p></li>
+      <li><h3>Train, then rise</h3><p>Take the loot home. Forge, merge, train, soak in the hot spring. Go back and win.</p></li>
+    </ol>
+    <div class="memo-row">
+      <div class="memos">
+      <div class="memo"><p class="from">From: HR · Re: Welcome aboard</p><p>HR is delighted to have you. Please find enclosed your signing bonus. Do not spend it on the vending machine. It is haunted.</p></div>
+      <div class="memo"><p class="from">From: HR · Re: Your shift</p><p>Your shift ended an hour ago. Please continue. Overtime is voluntary. Volunteering is mandatory. Your father is still at the shop.</p></div>
+    </div>
+      <figure class="hr-desk"><img src="assets/hr_goblin.png" width="600" height="700" alt="An HR goblin in round glasses and a mustard cardigan, holding a clipboard and a rubber stamp" loading="lazy"><figcaption>HR. Watching you work.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s-ink" id="rise">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap">
+    <span class="eyebrow">Career development</span>
+    <h2>Start at the bottom. Rise.</h2>
+    <p class="lede">Every shift sends him home with more than he left with. Collect it, combine it, and come back as a slightly bigger problem.</p>
+    <div class="rise-grid">
+      <article class="tile">
+        <div class="row"><img src="assets/hero_basic.png" width="275" height="300" alt="Grim Jr. with the intern scythe" loading="lazy"><img src="assets/hero_halberd.png" width="275" height="300" alt="with an ice halberd" loading="lazy"><img src="assets/hero_hammer.png" width="288" height="300" alt="with a bone hammer" loading="lazy"></div>
+        <div class="n">5 scythe forms</div><h3>Outgrow the scythe</h3>
+        <p>Pick three skills of a kind and the intern scythe becomes a halberd, a hammer, twin sickles, a flail or a gavel.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/ally_deathKnight.png" width="325" height="340" alt="Chibi Death Knight" loading="lazy"><img src="assets/ally_postalDragon.png" width="229" height="221" alt="A small postal dragon" loading="lazy"><img src="assets/ally_espressoBanshee.png" width="182" height="229" alt="A banshee holding an espresso" loading="lazy"></div>
+        <div class="n">7 lantern fusions</div><h3>Make colleagues</h3>
+        <p>Two souls in his lantern fuse into a ghost who fights beside him. HR was not consulted.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/item_eq_ns_weapon.png" width="126" height="150" alt="A set weapon" loading="lazy"><img src="assets/item_eq_au_cloak.png" width="121" height="150" alt="A set cloak" loading="lazy"><img src="assets/relic_lantern.png" width="86" height="150" alt="A relic lantern" loading="lazy"><img src="assets/trophy_mug.png" width="149" height="150" alt="A trophy mug" loading="lazy"></div>
+        <div class="n">Gear, sets, relics, trophies</div><h3>Forge and merge</h3>
+        <p>Three of a kind become one of the next tier. Wear a full set and the bonuses stack.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/mount_pony.png" width="302" height="222" alt="Skeletal pony" loading="lazy"><img src="assets/mount_snail.png" width="283" height="208" alt="A snail with a moustache" loading="lazy"><img src="assets/mount_cerberus.png" width="300" height="218" alt="A two-headed puppy" loading="lazy"></div>
+        <div class="n">Stabled for now</div><h3>Ride to work, later</h3>
+        <p>The mounts are put away while he learns to walk the route. When they come back: a skeletal pony, a snail with a moustache, and one day, Dad's dragon.</p>
+      </article>
+      <article class="tile">
+        <div class="row spirits"><img class="jar" src="assets/icon_jar_gold.png" width="96" height="116" alt="A soul jar" loading="lazy"><img class="ghost" src="assets/ally_lanternSquire.png" width="236" height="228" alt="Lantern Squire" loading="lazy"><img class="ghost" src="assets/ally_graniteGargoyle.png" width="210" height="229" alt="A granite gargoyle" loading="lazy"></div>
+        <div class="n">12 spirits</div><h3>Collect spirits</h3>
+        <p>Open jars in the Sanctum, level the spirits you find, and put the best ones on duty.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/banner_stairwell.jpg" width="900" height="300" alt="A stairwell going up into the dark" loading="lazy" style="border-radius:14px;border:3px solid var(--ink)"></div>
+        <div class="n">Overtime</div><h3>Stay late</h3>
+        <p>Night Jobs, the Stairwell, the Sub-Basement, the Reaper Rankings. Overtime is optional. It is also where the good loot is.</p>
+      </article>
+    </div>
+    <ul class="ladder" aria-label="Where this is going">
+      <li>Intern</li><li class="arrow" aria-hidden="true">→</li><li>Stronger intern</li><li class="arrow" aria-hidden="true">→</li><li>Alarmingly strong intern</li><li class="arrow" aria-hidden="true">→</li><li>Allowed on the dragon</li>
+    </ul>
+  </div>
+</section>
+
+<section class="meet s-night" id="meet">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <div class="pic"><img src="assets/grim-jr.png" width="585" height="640" alt="Grim Jr. standing with his scythe and lantern." loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Employee record</span>
+      <h2>Meet Grim Jr.</h2>
+      <p class="lede">Death's son. The smallest person in the building and the only one doing his job. He puts a clean glass out every night for when the milk arrives.</p>
+      <ul class="file">
+        <li><b>Position</b><span>Intern (Acting Death).</span></li>
+        <li><b>Reports to</b><span>Dad. Dad is at the shop.</span></li>
+        <li><b>Equipment</b><span>One scythe (Dad's, on loan, tall). One soul lantern. Sensible shoes.</span></li>
+        <li><b>Says</b><span>Nothing. He has no mouth. He files shift notes.</span></li>
+        <li><b>Strengths</b><span>Turns up.</span></li>
+        <li><b>Weaknesses</b><span>Sad knights. Ghost puppies.</span></li>
+        <li><b>Outlook</b><span>Not worried. The shop must be far.</span></li>
+        <li><b>Latest note</b><span>"Found a bench. Sat on it. Felt things."</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap" style="display:block">
+    <h3 class="moods-title">No mouth. Five moods. It is all in the eyes.</h3>
+    <div class="moods">
+      <figure><img src="assets/emo_grim.png" width="220" height="170" alt="Hooded skull, eyes open" loading="lazy"><figcaption>On shift</figcaption></figure>
+      <figure><img src="assets/emo_curious.png" width="220" height="175" alt="Hooded skull, one eye larger" loading="lazy"><figcaption>Hm</figcaption></figure>
+      <figure><img src="assets/emo_ow.png" width="220" height="176" alt="Hooded skull, eyes squeezed shut" loading="lazy"><figcaption>Ow</figcaption></figure>
+      <figure><img src="assets/emo_tired.png" width="220" height="187" alt="Hooded skull, eyes half closed" loading="lazy"><figcaption>Day 19</figcaption></figure>
+      <figure><img src="assets/emo_sleep.png" width="220" height="170" alt="Hooded skull, eyes gently closed" loading="lazy"><figcaption>Hot spring</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s-ink" id="story">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap">
+    <span class="eyebrow">How we got here</span>
+    <h2>Gone for milk. Back in 5 min.</h2>
+    <div class="story-grid">
+      <div>
+        <p>For as long as there has been an ending, <b>one person has handled it.</b> Death did every job himself and never took a day off.</p>
+        <p>Then one evening he looked in the fridge, put on his good hood, and stuck a note on his office door. <b>That was five hours ago.</b> HR will not say where he went. HR has laminated the note.</p>
+        <p>With nobody reaping, the queue at the exit stopped. The dead stood about, got bored, got jobs, and got in the way. They appealed. They complained. <b>One of them made a sign.</b></p>
+        <p>HR read the rulebook. The scythe may only be held by a Grim. HR checked the files. <b>There is exactly one other Grim.</b> He was found on a chair outside his father's office, holding a clean glass, waiting.</p>
+        <p>HR cannot make a child Death. There are forms. So his badge says <b>Intern (Acting Death)</b>, the scythe is still set to his father's height, and his robe has already been patched twice. He is not worried. The shop must be far.</p>
+      </div>
+      <div>
+        <figure class="doorpic"><img src="assets/story-door.jpg" width="900" height="867" alt="A heavy purple office door with a blank note stuck to it. Beside it, Grim Jr. sits on a small chair holding an empty glass, feet not reaching the floor." loading="lazy"><figcaption>Outside Dad's office. Still waiting.</figcaption></figure>
+        <div class="sticky" style="background:var(--cream);text-transform:none;font-size:20px">Gone for milk.<br>Back in 5 min.<small>— Dad</small></div>
+        <div class="sticky">Day 1. Dad went for milk. Waiting.<small>Shift note, G. Jr.</small></div>
+        <div class="sticky" style="transform:rotate(2deg);margin:22px 0 0 10px">Day 5. Customer wanted manager. Manager is at the shop. I am covering.<small>Shift note, G. Jr.</small></div>
+      </div>
+    </div>
+    <h3 style="margin-top:54px;font-size:26px">The route so far</h3>
+    <div class="chapters">
+      <article class="chapter"><div class="im" style="background-image:url('assets/ch1.jpg')" role="img" aria-label="A moonlit graveyard"><span class="num">1</span></div><div class="body"><h3>Whispering Boneyard</h3><div class="days">50 days</div><p>The easiest route in the Underworld. Nobody has cleared it since Dad left. You will not clear it first time either.</p></div></article>
+      <article class="chapter"><div class="im" style="background-image:url('assets/ch2.jpg')" role="img" aria-label="An office corridor of filing cabinets"><span class="num">2</span></div><div class="body"><h3>The Department of Unfinished Business</h3><div class="days">60 days</div><p>The backlog was never out in the field. It is the office. The mail machine thinks you are an envelope.</p></div></article>
+      <article class="chapter locked"><div class="im"><span class="num">3</span>?</div><div class="body"><h3>Upstairs</h3><div class="days">Later</div><p>There is one form to deliver to the top floor. The lift is out of order.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="s-night" id="cast">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <span class="eyebrow">Staff &amp; clients</span>
+    <h2>Everyone else has a reason not to work.</h2>
+    <div class="cards">
+      <article class="card"><div class="im"><img src="assets/npc_goblin.png" width="285" height="331" alt="A green goblin in an apron" loading="lazy"></div><h3>The Coffee Goblins</h3><div class="role">Breakroom</div><p>Run the only room that works. Out of cups. Out of milk.</p></article>
+      <article class="card"><div class="im"><img src="assets/npc_smith.png" width="276" height="322" alt="A skull-faced smith with a red bandana and a hammer" loading="lazy"></div><h3>The Smith</h3><div class="role">Bone Forge</div><p>Says nothing. Fixes everything.</p></article>
+      <article class="card"><div class="im"><img src="assets/emo_pony.png" width="220" height="163" alt="A small skeletal pony with a saddle" loading="lazy"></div><h3>Mini Skeletal Pony</h3><div class="role">Company transport, stabled</div><p>Off duty for now. Still eats paperwork.</p></article>
+      <article class="card"><div class="im"><img src="assets/npc_knight.png" width="262" height="295" alt="A tired knight sitting against a gravestone" loading="lazy"></div><h3>The Weary Vanguard</h3><div class="role">Client, homesick</div><p>Misses his family. The form says reap. You have two buttons.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_karenSlime.png" width="280" height="273" alt="A green slime with blonde hair and sunglasses, frowning" loading="lazy"></div><h3>The Demanding Customer</h3><div class="role">Client, loud</div><p>Would like to speak to whoever is in charge of death.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_wisp.png" width="230" height="278" alt="A small mint-green ghost flame in a scarf" loading="lazy"></div><h3>The Nervous Wisp</h3><div class="role">Client, anxious</div><p>Scared of being reaped. Also of being spared.</p></article><article class="card"><div class="im" style="font-family:var(--head);font-size:64px;color:var(--edge)">?</div><h3>Big Brother Ogre</h3><div class="role">Day 35</div><p>His little brother was asleep on a chest. This one is awake.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_paladin.png" width="313" height="350" alt="A gold-armoured paladin holding a sign that says Do Not Reap" loading="lazy"></div><h3>The Cursed Paladin</h3><div class="role">Client, refusing</div><p>Blocks the chapel door with a sign. That is not how signs work.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_taxKnight.png" width="297" height="350" alt="A round armoured knight holding a ledger" loading="lazy"></div><h3>The Tax Knight</h3><div class="role">Client, auditing</div><p>Has found a discrepancy in the graveyard. It is you.</p></article>
+      <article class="card"><div class="im" style="font-family:var(--head);font-size:64px;color:var(--edge)">?</div><h3>The Bone Captain</h3><div class="role">Day 50</div><p>Has guarded this crypt for six hundred years. Nobody has told him why.</p></article>
+      <article class="card"><div class="im"><img src="assets/npc_ectoPup.png" width="298" height="282" alt="A mint-green ghost puppy" loading="lazy"></div><h3>The Ecto-Pup</h3><div class="role">Character test</div><p>You know what the right answer is.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_pendulum.png" width="271" height="350" alt="A grandfather clock with an angry face and a robe" loading="lazy"></div><h3>Director Pendulum</h3><div class="role">Management</div><p>A clock that will not let anyone clock out.</p></article>
+      <article class="card"><div class="im"><img src="assets/mount_dragon.png" width="360" height="168" alt="A small flying dragon made of bone, with purple wings and a glowing green eye" loading="lazy"></div><h3>Dad's dragon</h3><div class="role">Executive vehicle</div><p>The Ossuary Skydrake. Under a dust sheet in the stable. He is not allowed. Yet.</p></article>
+      <article class="card"><div class="im"><img src="assets/emo_stamp.png" width="182" height="220" alt="A rubber stamp" loading="lazy"></div><h3>Death</h3><div class="role">Dad</div><p>Out. Getting milk. Back in 5 minutes.</p></article>
+      <article class="card"><div class="im"><img src="assets/emo_coffee.png" width="220" height="194" alt="A mug of coffee" loading="lazy"></div><h3>HR</h3><div class="role">A department, not a person</div><p>Delighted to have you. Has never been found.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="s-ink" id="screens">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap">
+    <span class="eyebrow">Evidence</span>
+    <h2>A day at the office.</h2>
+    <p class="lede">Screens from the build in development. Things will change. The hot spring will not.</p>
+    <div class="shots" tabindex="0" aria-label="Screenshots, scroll sideways">
+      <figure><img src="assets/game-home.png" width="390" height="844" alt="The Breakroom: Grim Jr. in the middle, the coffee bar, the Sanctum, the Bone Forge and a Start Shift button" loading="lazy"><figcaption>The Breakroom</figcaption></figure>
+      <figure><img src="assets/game-shift.png" width="390" height="844" alt="Day 1 of a shift: Grim Jr. walking through a moonlit graveyard with his scythe" loading="lazy"><figcaption>One thumb. Big scythe.</figcaption></figure>
+      <figure><img src="assets/game-skills.png" width="390" height="844" alt="A meeting with The Client Who Won&#39;t Die, with a grid of skills to pick from" loading="lazy"><figcaption>Build a run</figcaption></figure>
+      <figure><img src="assets/game-forge.png" width="390" height="844" alt="The Bone Forge: Grim Jr. with his gear slots and stats" loading="lazy"><figcaption>Forge and train</figcaption></figure>
+      <figure><img src="assets/game-sanctum.png" width="390" height="844" alt="The Soul Sanctum with three jars and the fusion pedestal" loading="lazy"><figcaption>Collect spirits</figcaption></figure>
+      <figure><img src="assets/game-spring.png" width="390" height="844" alt="Grim Jr. soaking in a glowing green hot spring" loading="lazy"><figcaption>Breaks are permitted</figcaption></figure>
+    </div>
+    <h3 style="margin-top:50px;font-size:26px;text-align:center">Office supplies</h3>
+    <div class="stickers" aria-label="Stickers">
+      <img src="assets/emo_peek.png" width="220" height="111" alt="Grim Jr. peeking" loading="lazy">
+      <img src="assets/emo_donotreap.png" width="158" height="220" alt="A sign reading Do Not Reap" loading="lazy">
+      <img src="assets/emo_reap.png" width="217" height="220" alt="Reap button: a skull on purple" loading="lazy">
+      <img src="assets/emo_spare.png" width="217" height="220" alt="Spare button: a crown on gold" loading="lazy">
+      <img src="assets/emo_lantern.png" width="155" height="220" alt="The soul lantern" loading="lazy">
+      <img src="assets/emo_salute.png" width="169" height="220" alt="Grim Jr. saluting" loading="lazy">
+      <img src="assets/emo_hop.png" width="203" height="220" alt="Grim Jr. mid-hop" loading="lazy">
+      <img src="assets/emo_spring.png" width="220" height="184" alt="Grim Jr. in the hot spring" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="s-night" id="faq">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <div style="text-align:center"><span class="eyebrow">Frequently filed questions</span><h2>FAQ</h2></div>
+    <div class="faq">
+      <details><summary>What kind of game is it?</summary><p>An idle adventure roguelike you play in portrait with one thumb. Grim Jr. walks and fights on his own; you choose his skills, decide who to reap or spare, and build him up between shifts.</p></details>
+      <details><summary>When does it come out, and on what?</summary><p>No date yet. It is coming to the App Store for iPhone, and to Android. Leave your email below and you get one message when the doors open.</p></details>
+      <details><summary>How much will it cost?</summary><p>Not announced. The build in development has every real-money button switched off.</p></details>
+      <details><summary>Is it scary or sad?</summary><p>Neither. It is cute-spooky, and he is not worried about Dad at all. Nobody is hurt: everyone he meets is already dead and merely overdue. Defeated clients turn into a little soul that floats into his lantern.</p></details>
+      <details><summary>Why does he have no mouth?</summary><p>Because he does not need one. He says everything with his eyes, his hood and a small hop. It is the one rule nobody is allowed to break, including us.</p></details>
+      <details><summary>Is he Death's son?</summary><p>Yes. Dad went out for milk and left the scythe by the door.</p></details>
+      <details><summary>Where is Death?</summary><p>At the shop. He will be back in five minutes. That is what the note says and HR has no reason to doubt the note.</p></details>
+      <details><summary>Who is making it?</summary><p>ORY Studios. A very small team. Roughly intern-sized.</p></details>
+      <details><summary>How do I get help or report a problem?</summary><p>Email <a href="mailto:support@orynn.io">support@orynn.io</a>. Tell us your device and what happened. Never send a password or payment details.</p></details>
+    </div>
+  </div>
+</section>
+
+
+<section class="s-ink" id="links" style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Where to find the office</span>
+      <h2>Where to find us</h2>
+      <ul class="pills">
+        <li><span>App Store <em>coming soon</em></span></li>
+        <li><span>Google Play <em>coming soon</em></span></li>
+        <li><a href="https://www.youtube.com/channel/UCicF2tfvihn7ahWbzK9Pwtg" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div id="press">
+      <span class="eyebrow">Press kit</span>
+      <h2>For writers and video makers</h2>
+      <ul class="pills">
+        <li><a href="assets/press/grim-jr-rise-logo.png" download>Logo</a></li>
+        <li><a href="assets/press/grim-jr-rise-logo-on-purple.png" download>Logo on purple</a></li>
+        <li><a href="assets/press/grim-jr-rise-logo-horizontal.png" download>Logo, one line</a></li>
+        <li><a href="assets/press/grim-jr-rise-keyart-1920x1080.jpg" download>Key art</a></li>
+        <li><a href="assets/press/grim-jr-rise-icon-512.png" download>Icon</a></li>
+      </ul>
+      <ul class="facts">
+        <li><b>Title:</b> Grim Jr. Rise!</li>
+        <li><b>Genre:</b> idle adventure roguelike</li>
+        <li><b>Platform:</b> iPhone (App Store) and Android</li>
+        <li><b>Release:</b> to be announced</li>
+        <li><b>Made by:</b> ORY Studios</li>
+        <li><b>Contact:</b> <a href="mailto:support@orynn.io">support@orynn.io</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+</div>
 
 </main>
 
@@ -269,27 +805,13 @@ footer p{margin:0 0 4px}
       <a href="mailto:support@orynn.io">support@orynn.io</a>
     </div>
     <p>Grim Jr. Rise! is in development. Grim Jr. and all characters shown are original to this game. © 2026 ORY Studios.</p>
-    <p>Privacy: this site sets no cookies, has no trackers, loads nothing from other sites and collects nothing. Back in 5 minutes.</p>
+    <p>Privacy: this site sets no cookies, has no trackers and loads nothing from other sites. If you sign up, your email goes to a Google Form run by ORY Studios and is used only to tell you when the game opens; to be removed, write to support@orynn.io. Back in 5 minutes.</p>
   </div>
 </footer>
 
 <script>
 (function(){
-  var track=document.getElementById('track'); if(!track) return;
-  var shots=[].slice.call(track.querySelectorAll('.shot'));
-  function centre(){var m=track.scrollLeft+track.clientWidth/2,best=0,d=1e9;
-    shots.forEach(function(s,i){var c=s.offsetLeft+s.offsetWidth/2,x=Math.abs(c-m);if(x<d){d=x;best=i}});
-    shots.forEach(function(s,i){s.classList.toggle('on',i===best)});return best}
-  function go(n){var i=Math.max(0,Math.min(shots.length-1,centre()+n)),s=shots[i];
-    track.scrollTo({left:s.offsetLeft+s.offsetWidth/2-track.clientWidth/2,behavior:'smooth'})}
-  var t;track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(centre,40)},{passive:true});
-  document.querySelector('.arrow.prev').addEventListener('click',function(){go(-1)});
-  document.querySelector('.arrow.next').addEventListener('click',function(){go(1)});
-  window.addEventListener('resize',centre);
-  /* start on the second card so there is a neighbour on each side */
-  var s=shots[1];track.scrollLeft=s.offsetLeft+s.offsetWidth/2-track.clientWidth/2;centre();
-  /* tab highlight */
-  var tabs=[].slice.call(document.querySelectorAll('.tabs a')),ids=['home','watch','register','features'];
+  var tabs=[].slice.call(document.querySelectorAll('.tabs a')),ids=['home','register','story','cast','faq'];
   function mark(){var y=window.scrollY+140,cur=0;ids.forEach(function(id,i){var e=document.getElementById(id);if(e&&e.offsetTop<=y)cur=i});
     tabs.forEach(function(a,i){a.classList.toggle('on',i===cur)})}
   window.addEventListener('scroll',mark,{passive:true});mark();

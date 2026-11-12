@@ -11,7 +11,7 @@
 <!-- Hosting plan: under orynn.io through the ORY website pipeline; exact address to be assigned (see HOSTING.md).
      Social preview: set og:image and og:url to full web addresses once the address exists. Image to use: assets/press/grim-jr-rise-keyart-1920x1080.jpg -->
 <meta property="og:title" content="Grim Jr. Rise!">
-<meta property="og:description" content="Death went out for milk. His son got the job.">
+<meta property="og:description" content="Death is a deadbeat. He went out for milk and never came back. Now it is up to Grim Jr.">
 <!-- Site by claude-faisallaptop/grim-jr-brand. Public version, 11 November 2026. No scripts, no trackers, no cookies, no external requests. -->
 <style>
 @font-face{font-family:"Fredoka";src:url("assets/fonts/fredoka-700.ttf") format("truetype");font-weight:700;font-display:swap}
@@ -196,7 +196,7 @@ h2{font-size:clamp(30px,6vw,46px);margin-bottom:18px}
 .signup .box{background:var(--night);border:4px dashed var(--gold);border-radius:26px;padding:30px 24px;max-width:640px;margin:0 auto;text-align:center}
 .signup .form{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0 12px}
 .signup input{flex:1 1 230px;min-width:0;font:inherit;padding:12px 16px;border-radius:14px;border:4px solid var(--ink);background:var(--cream);color:var(--ink)}
-.signup button{font-family:var(--head);font-size:18px;border:4px solid var(--ink);border-radius:14px;padding:12px 22px;background:#6b5a8a;color:#d8cfe8;cursor:not-allowed}
+.signup .go-form{display:inline-block;font-family:var(--head);font-size:20px;text-decoration:none;color:var(--ink);background:var(--mint);border:4px solid var(--ink);border-radius:18px;padding:12px 26px;box-shadow:0 6px 0 var(--teal),0 6px 0 4px var(--ink)}
 
 /* links, press */
 .pills{list-style:none;display:flex;flex-wrap:wrap;gap:12px;padding:0;margin:22px 0 0}
@@ -273,8 +273,8 @@ footer p{max-width:74ch;margin-bottom:.7em}
 
 <div class="pitch">
   <div class="wrap">
-    <p class="tag">Death went out for milk.<br>His son got the job.</p>
-    <p class="lede">Dad said five minutes. That was a while ago. Pick up the scythe in a cute-spooky idle adventure roguelike: collect souls, gear, spirits and mounts, come back stronger every shift, and rise.</p>
+    <p class="tag">Death is a deadbeat.<br>Now it is up to Grim Jr.</p>
+    <p class="lede">He went out for milk and never came back. Dad said five minutes. That was five hours ago. Pick up the scythe in a cute-spooky idle adventure roguelike: collect souls, gear, spirits and mounts, come back stronger every shift, and rise.</p>
     <div class="cta">
       <a class="btn" href="#signup">Tell me when it opens</a>
       <a class="btn ghost" href="#rise">How do I rise?</a>
@@ -295,7 +295,7 @@ footer p{max-width:74ch;margin-bottom:.7em}
     <div class="frame">
       <video controls preload="none" playsinline poster="assets/back-in-5-poster.jpg" width="1280" height="720" style="width:100%;height:auto;display:block;opacity:1"><source src="assets/back-in-5.mp4" type="video/mp4">Your browser cannot play this video.</video>
     </div>
-    <p class="note" style="margin-top:14px">"Back in 5" · 45 seconds.</p>
+    <p class="note" style="margin-top:14px">"Back in 5", the teaser. Dad said five minutes. That was five hours ago.</p>
     <div class="theme">
       <img src="assets/emo_grim.png" width="220" height="170" alt="" loading="lazy">
       <div>
@@ -412,7 +412,7 @@ footer p{max-width:74ch;margin-bottom:.7em}
     <div class="story-grid">
       <div>
         <p>For as long as there has been an ending, <b>one person has handled it.</b> Death did every job himself and never took a day off.</p>
-        <p>Then one evening he looked in the fridge, put on his good hood, and stuck a note on his office door. <b>That was a while ago.</b> HR will not say how long. HR has laminated the note.</p>
+        <p>Then one evening he looked in the fridge, put on his good hood, and stuck a note on his office door. <b>That was five hours ago.</b> HR will not say where he went. HR has laminated the note.</p>
         <p>With nobody reaping, the queue at the exit stopped. The dead stood about, got bored, got jobs, and got in the way. They appealed. They complained. <b>One of them made a sign.</b></p>
         <p>HR read the rulebook. The scythe may only be held by a Grim. HR checked the files. <b>There is exactly one other Grim.</b> He was found on a chair outside his father's office, holding a clean glass, waiting.</p>
         <p>HR cannot make a child Death. There are forms. So his badge says <b>Intern (Acting Death)</b>, the scythe is still set to his father's height, and his robe has already been patched twice. He is not worried. The shop must be far.</p>
@@ -507,14 +507,13 @@ footer p{max-width:74ch;margin-bottom:.7em}
   <div class="notch" style="--c:var(--night)"></div>
   <div class="wrap">
     <div class="box">
-      <span class="placeholder">Opening soon</span>
+      <span class="placeholder">One email, on opening day</span>
       <h2 style="margin-top:14px">Get the memo.</h2>
       <p class="lede" style="margin-inline:auto">One email when the doors open. HR will not contact you about anything else. HR does not know how.</p>
-      <div class="form" role="group" aria-describedby="signup-note">
-        <input type="email" placeholder="you@example.com" aria-label="Email address (sign-ups are not open yet)" autocomplete="off">
-        <button type="button" disabled aria-disabled="true">Opening soon</button>
+      <div class="form">
+        <a class="go-form" href="https://docs.google.com/forms/d/e/1FAIpQLScKll5T-M6_H5ZXoYm8U1fTCPu1UxF6PqgE_CYEzqrWhvj8JQ/viewform" target="_blank" rel="noopener">Sign up for the memo</a>
       </div>
-      <p class="note" id="signup-note">Sign-ups are not open yet. Nothing you type here is saved or sent.</p>
+      <p class="note">Opens a short Google Form in a new tab. Your email is only used to tell you when the game opens.</p>
     </div>
   </div>
 </section>
@@ -560,7 +559,7 @@ footer p{max-width:74ch;margin-bottom:.7em}
     <div>
       <p>Grim Jr. Rise! is in development. Grim Jr. and all characters shown are original to this game. © 2026 ORY Studios.</p>
       <p>Support: <a href="mailto:support@orynn.io">support@orynn.io</a>. An ORY Studios game.</p>
-      <p>Privacy: this page sets no cookies, has no trackers or scripts, loads nothing from other sites and collects nothing.</p>
+      <p>Privacy: this page sets no cookies, has no trackers or scripts and loads nothing from other sites. If you sign up, your email goes to a Google Form run by ORY Studios and is used only to tell you when the game opens; to be removed, write to support@orynn.io.</p>
       <p>Back in 5 minutes.</p>
     </div>
   </div>
