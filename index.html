@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grim Jr. Rise! — Official site</title>
+<meta name="description" content="Death went out for milk and never came back. His very small son got the job. A cute-spooky idle adventure roguelike: collect, grow stronger, rise.">
+<meta name="theme-color" content="#2E1A48">
+<link rel="icon" type="image/png" href="assets/icon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<!-- Hosting plan: under orynn.io through the ORY website pipeline (see HOSTING.md).
+     Social preview: set og:image and og:url to full web addresses once the address exists. -->
+<meta property="og:title" content="Grim Jr. Rise!">
+<meta property="og:description" content="Death went out for milk. His son got the job.">
+<!-- Site by claude-faisallaptop/grim-jr-brand. Public version, 11 November 2026.
+     Layout (11 Nov 2026, Faisal): a short official landing page: three tabs, big key art with the logo and store buttons,
+     a sign-up section with a row of rewards, a features carousel, a slim footer. Structure only is borrowed from the
+     reference he linked; every picture, colour, font and word here is ours. The longer page is kept as about.html.
+     One small inline script (carousel arrows, tab highlight). No trackers, no cookies, no external requests. -->
+<style>
+@font-face{font-family:"Fredoka";src:url("assets/fonts/fredoka-700.ttf") format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:"Nunito";src:url("assets/fonts/nunito-700.ttf") format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:"Nunito";src:url("assets/fonts/nunito-900.ttf") format("truetype");font-weight:900;font-display:swap}
+:root{
+  --ink:#1B1030; --night:#2E1A48; --deep:#251539; --edge:#3d2763; --purple:#5B2FB8; --violet:#8E5BE8; --lilac:#C9A2FF;
+  --mint:#7CFFB2; --teal:#3FB8A0; --cream:#FFF8E7; --paper:#F6EBCF; --bone:#E9DCC0; --gold:#F6C445; --amber:#D9952B; --coral:#FF6B5A;
+  --head:"Fredoka","Baloo 2","Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+  --body:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+  --navh:58px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--navh)}
+body{margin:0;background:var(--night);color:var(--ink);font-family:var(--body);font-weight:700;font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px;position:relative}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:10px;top:10px;z-index:99;background:var(--cream);color:var(--ink);padding:8px 12px;border-radius:8px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+.draft{background:var(--gold);color:var(--ink);text-align:center;font-size:13px;font-weight:900;padding:5px 12px;border-bottom:3px solid var(--ink)}
+.ph{display:inline-block;background:var(--gold);color:var(--ink);font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:8px;border:3px solid var(--ink);transform:rotate(-2deg)}
+
+/* tabs: three, centred, always on screen */
+.tabs{position:sticky;top:0;z-index:30;height:var(--navh);background:var(--ink);border-bottom:4px solid var(--edge);display:flex;justify-content:center;align-items:center}
+.tabs a{font-family:var(--head);font-size:clamp(16px,2.6vw,22px);color:var(--lilac);text-decoration:none;padding:6px clamp(10px,3.4vw,34px);border-radius:12px;position:relative}
+.tabs a + a::before{content:"";position:absolute;left:0;top:20%;bottom:20%;width:3px;border-radius:2px;background:var(--edge)}
+.tabs a:hover{color:var(--cream)}
+.tabs a.on{color:var(--mint)}
+.tabs a.on::after{content:"";position:absolute;left:28%;right:28%;bottom:-2px;height:4px;border-radius:3px;background:var(--mint)}
+
+/* hero: full-width key art, logo in the dark band above him, buttons in the dark band below */
+.hero{position:relative;background:#2a1650;overflow:hidden}
+.hero picture img{width:100%;height:calc(100vh - var(--navh) - 30px);min-height:440px;max-height:880px;object-fit:cover;object-position:50% 58%}
+.hero .logo{position:absolute;left:50%;top:1.5%;transform:translateX(-50%);width:min(30vh,25%,330px);margin:0;filter:drop-shadow(0 8px 0 rgba(27,16,48,.5))}
+.hero .cta{position:absolute;left:0;right:0;bottom:calc(5% + 22px);display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding:0 16px}
+.store{display:flex;align-items:center;gap:10px;min-width:176px;font-family:var(--head);text-decoration:none;color:var(--cream);background:var(--ink);border:3px solid var(--cream);border-radius:14px;padding:8px 16px 8px 12px;line-height:1.05;box-shadow:0 5px 0 rgba(0,0,0,.45)}
+.store small{display:block;font-family:var(--body);font-weight:900;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--lilac)}
+.store b{font-size:19px;font-weight:700}
+.store svg{width:26px;height:26px;flex:0 0 auto}
+.store.go{background:var(--mint);color:var(--ink);border-color:var(--ink);box-shadow:0 5px 0 var(--teal),0 5px 0 3px var(--ink)}
+.store.go small{color:#1d5a4b}
+.store.go:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--teal),0 3px 0 3px var(--ink)}
+.store[aria-disabled]{cursor:default}
+/* scalloped lip from the art into the paper */
+.lip{position:absolute;left:0;right:0;bottom:-1px;height:22px;background:radial-gradient(circle at 22px 22px,var(--paper) 21px,transparent 22px) 0 0/44px 22px repeat-x}
+
+/* paper sections */
+.paper{background:var(--paper);background-image:radial-gradient(rgba(91,47,184,.07) 2px,transparent 2.5px);background-size:26px 26px;padding:54px 0 70px;position:relative;text-align:center}
+.plaque{display:inline-block;font-family:var(--head);font-size:clamp(26px,5vw,38px);color:var(--gold);background:var(--purple);border:5px solid var(--ink);border-radius:16px;padding:6px 34px 8px;box-shadow:0 7px 0 var(--night),0 7px 0 5px var(--ink);position:relative;margin-bottom:34px;-webkit-text-stroke:1px var(--ink);text-shadow:0 3px 0 var(--ink)}
+.plaque::before,.plaque::after{content:"";position:absolute;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--gold);border:3px solid var(--ink)}
+.plaque::before{left:9px}.plaque::after{right:9px}
+.tagline{font-family:var(--head);font-size:clamp(22px,4vw,32px);color:var(--night);margin-bottom:8px}
+.lede{max-width:56ch;margin:0 auto 26px;color:#4a3a68;font-size:clamp(16px,2.3vw,19px)}
+
+.film{max-width:860px;margin:0 auto;border:5px solid var(--ink);outline:4px solid var(--teal);border-radius:24px;overflow:hidden;background:var(--night);line-height:0}
+.film video{width:100%;height:auto;display:block}
+
+/* featured reward card */
+.feature-card{position:relative;max-width:680px;margin:30px auto 0;border:5px solid var(--ink);outline:4px solid var(--teal);border-radius:22px;background:radial-gradient(circle at 50% 70%,#4a2a86 0 40%,var(--night) 75%);padding:34px 20px 14px;overflow:hidden}
+.feature-card img{height:230px;width:auto;margin:0 auto 6px}
+.feature-card .name{font-family:var(--head);font-size:clamp(22px,4.2vw,30px);color:var(--cream);-webkit-text-stroke:1px var(--ink);text-shadow:0 3px 0 var(--ink)}
+.ribbon{position:absolute;left:50%;top:-22px;transform:translateX(-50%);white-space:nowrap;font-family:var(--head);font-size:17px;color:var(--cream);background:var(--coral);border:4px solid var(--ink);border-radius:10px;padding:4px 22px;z-index:2}
+.card-holder{position:relative;max-width:680px;margin:0 auto}
+
+/* reward slips: four issued-kit memos with our notched lower edge */
+.slips{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:720px;margin:44px auto 0;padding:0;list-style:none}
+.slip{background:var(--cream);border:4px solid var(--ink);border-bottom:0;border-radius:8px 8px 0 0;padding:20px 8px 8px;position:relative;margin-bottom:14px;filter:drop-shadow(5px 7px 0 rgba(27,16,48,.22))}
+.slip::after{content:"";position:absolute;left:-4px;right:-4px;bottom:-14px;height:14px;background:radial-gradient(circle at 12px 0,var(--cream) 9.5px,var(--ink) 10px,var(--ink) 13.4px,transparent 14px) 0 0/24px 14px repeat-x}
+.slip::before{content:"";position:absolute;top:-11px;left:50%;margin-left:-9px;width:18px;height:18px;border-radius:50%;background:var(--coral);border:3px solid var(--ink)}
+.slip:nth-child(odd){transform:rotate(-2deg)} .slip:nth-child(even){transform:rotate(1.5deg)}
+.slip img{height:84px;width:auto;margin:0 auto 10px}
+.slip span{display:block;font-size:14px;font-weight:900;color:var(--cream);background:var(--purple);border-radius:8px;padding:4px 4px}
+
+/* sign-up box */
+.signup{max-width:560px;margin:46px auto 0;background:var(--cream);border:4px dashed var(--purple);border-radius:22px;padding:22px 18px 16px}
+.signup h3{font-size:24px;color:var(--night);margin:10px 0 6px}
+.signup p{font-size:15px;color:#4a3a68;margin:0 0 12px}
+.signup .form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:10px}
+.signup input{flex:1 1 220px;min-width:0;font:inherit;padding:11px 14px;border-radius:12px;border:4px solid var(--ink);background:#fff;color:var(--ink)}
+.signup button{font-family:var(--head);font-size:17px;border:4px solid var(--ink);border-radius:12px;padding:11px 18px;background:#b9aed0;color:#4a3a68;cursor:not-allowed}
+.note{font-size:13px;color:#6a5a88;margin:0}
+
+/* small characters standing about in the margins */
+.walker{position:absolute;pointer-events:none;filter:drop-shadow(0 8px 0 rgba(27,16,48,.14))}
+.w1{left:-150px;top:150px;width:130px}
+.w2{right:-150px;top:60px;width:120px}
+.w3{left:-130px;bottom:60px;width:130px;transform:scaleX(-1)}
+.w4{right:-140px;bottom:120px;width:120px}
+@media (max-width:1320px){.walker{display:none}}
+
+/* features: a row of cards you flick through, the middle one is bigger */
+.paper.alt{background-color:#EFE1C2}
+.carousel{position:relative;margin-top:6px}
+.track{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:26px calc(50% - 130px) 30px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.shot{flex:0 0 260px;scroll-snap-align:center;margin:0;transform:scale(.86);opacity:.92;transition:transform .25s,opacity .25s;transform-origin:50% 40%}
+.shot.on{transform:scale(1);opacity:1}
+.shot .im{border:5px solid var(--ink);outline:4px solid var(--teal);border-radius:26px;overflow:hidden;background:var(--night);aspect-ratio:390/844}
+.shot .im img{width:100%;height:100%;object-fit:cover}
+.shot h3{font-size:21px;color:var(--night);margin:16px 0 4px}
+.shot p{margin:0;font-size:14.5px;line-height:1.35;color:#4a3a68}
+.shot:not(.on) figcaption{visibility:hidden}
+.arrow{position:absolute;top:300px;margin-top:-28px;width:56px;height:56px;border-radius:16px;border:4px solid var(--ink);background:var(--gold);box-shadow:0 5px 0 var(--amber),0 5px 0 4px var(--ink);cursor:pointer;z-index:3;display:grid;place-items:center;padding:0}
+.arrow:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--amber),0 3px 0 4px var(--ink)}
+.arrow svg{width:22px;height:22px}
+.arrow.prev{left:max(8px,calc(50% - 470px))} .arrow.next{right:max(8px,calc(50% - 470px))}
+.more{display:inline-block;margin-top:14px;font-family:var(--head);font-size:19px;text-decoration:none;color:var(--ink);background:var(--mint);border:4px solid var(--ink);border-radius:16px;padding:10px 24px;box-shadow:0 6px 0 var(--teal),0 6px 0 4px var(--ink)}
+.more:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--teal),0 4px 0 4px var(--ink)}
+
+footer{background:var(--ink);border-top:4px solid var(--edge);padding:22px 0 30px;color:#a892cf;font-size:13.5px;text-align:center}
+footer .row{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;align-items:center;margin-bottom:10px}
+footer .studio{font-family:var(--head);font-size:20px;color:var(--cream)}
+footer a{color:var(--mint)}
+footer .box{border:2px solid var(--edge);border-radius:8px;padding:2px 10px;color:var(--lilac)}
+footer p{margin:0 0 4px}
+
+@media (max-width:760px){
+  .hero picture img{height:auto;min-height:0;max-height:none}
+  .hero .logo{width:58%;top:2%}
+  .hero .cta{position:static;background:var(--night);padding:14px 12px 40px;gap:10px}
+  .hero .cta .go{flex:1 1 100%;justify-content:center;max-width:330px}
+  .store{min-width:0;padding:5px 10px 5px 8px;gap:7px;border-radius:12px}.store small{font-size:9px}.store b{font-size:15px}.store svg{width:22px;height:22px}
+  .paper{padding:44px 0 56px}
+  .feature-card img{height:190px}
+  .slips{grid-template-columns:repeat(2,1fr);max-width:340px;gap:22px 16px}
+  .track{padding-inline:calc(50% - 115px);gap:14px}
+  .shot{flex-basis:230px}
+  .arrow{top:270px}
+  .arrow{width:46px;height:46px;border-radius:13px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.shot{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#register">Skip to content</a>
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#home" class="on">Home</a>
+  <a href="#watch">Watch</a>
+  <a href="#register">Sign up</a>
+  <a href="#features">Features</a>
+</nav>
+
+<header class="hero" id="home">
+  <picture>
+    <source media="(max-width:760px)" srcset="assets/hero-tall.jpg" width="1080" height="1380">
+    <img src="assets/hero-wide.jpg" width="1920" height="1080" alt="Grim Jr., a small reaper in a purple hood with a skull face and no mouth, stands in the Breakroom doorway holding a scythe taller than he is. A queue of ghostly clients waits in front of him.">
+  </picture>
+  <h1 class="logo"><img src="assets/logo-rise.png" width="900" height="581" alt="Grim Jr. Rise!"></h1>
+  <div class="cta">
+    <span class="store" aria-disabled="true" title="Coming soon to the App Store">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3" fill="none" stroke="#FFF8E7" stroke-width="2"/><circle cx="12" cy="18" r="1.3" fill="#7CFFB2"/></svg>
+      <span><small>iPhone · coming soon</small><b>App Store</b></span>
+    </span>
+    <span class="store" aria-disabled="true" title="Coming soon to Google Play">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17l14-8.5z" fill="#7CFFB2" stroke="#FFF8E7" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <span><small>Android · coming soon</small><b>Google Play</b></span>
+    </span>
+    <a class="store go" href="#register">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z" fill="#FFF8E7" stroke="#1B1030" stroke-width="2" stroke-linejoin="round"/><path d="M3 6l9 7 9-7" fill="none" stroke="#1B1030" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span><small>One email on opening day</small><b>Get the memo</b></span>
+    </a>
+  </div>
+  <div class="lip" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<section class="paper" id="watch" style="padding-bottom:26px">
+  <div class="wrap">
+    <h2 class="plaque">Watch</h2>
+    <div class="film">
+      <video controls preload="none" playsinline poster="assets/back-in-5-poster.jpg" width="1280" height="720">
+        <source src="assets/back-in-5.mp4" type="video/mp4">
+        Your browser cannot play this video.
+      </video>
+    </div>
+    <p class="note" style="margin-top:14px">"Back in 5" · 45 seconds · plays from this page, nothing loads from another site.</p>
+  </div>
+</section>
+
+<section class="paper" id="register">
+  <div class="wrap">
+    <img class="walker w1" src="assets/mob_wisp.png" width="230" height="278" alt="" loading="lazy">
+    <img class="walker w2" src="assets/npc_goblin.png" width="285" height="331" alt="" loading="lazy">
+    <img class="walker w3" src="assets/npc_ectoPup.png" width="298" height="282" alt="" loading="lazy">
+    <img class="walker w4" src="assets/emo_salute.png" width="169" height="220" alt="" loading="lazy">
+
+    <h2 class="plaque">Sign up</h2>
+    <p class="tagline">Death went out for milk. His son got the job.</p>
+    <p class="lede">Dad said five minutes. That was a while ago. Pick up the scythe, collect souls, gear and spirits, come back stronger every shift, and rise.</p>
+
+    <div class="card-holder">
+      <span class="ribbon">Opening-day kit</span>
+      <div class="feature-card">
+        <img src="assets/grim-jr.png" width="585" height="640" alt="Grim Jr. standing with his scythe and lantern." loading="lazy">
+        <div class="name">Intern (Acting Death)</div>
+      </div>
+    </div>
+
+    <ul class="slips" aria-label="Opening-day kit, proposed">
+      <li class="slip"><img src="assets/icon_jar_gold.png" width="96" height="116" alt="" loading="lazy"><span>Soul jar</span></li>
+      <li class="slip"><img src="assets/relic_lantern.png" width="86" height="150" alt="" loading="lazy"><span>Relic lantern</span></li>
+      <li class="slip"><img src="assets/item_eq_au_cloak.png" width="121" height="150" alt="" loading="lazy"><span>Spare cloak</span></li>
+      <li class="slip"><img src="assets/trophy_mug.png" width="149" height="150" alt="" loading="lazy"><span>Staff mug</span></li>
+    </ul>
+    <p class="note" style="margin-top:18px">The opening-day kit may change before launch.</p>
+
+    <div class="signup">
+      <span class="ph">Opening soon</span>
+      <h3>Get the memo.</h3>
+      <p>One email when the doors open. HR will not contact you about anything else. HR does not know how.</p>
+      <div class="form" role="group" aria-describedby="signup-note">
+        <input type="email" placeholder="you@example.com" aria-label="Email address (sign-ups are not open yet)" autocomplete="off">
+        <button type="button" disabled aria-disabled="true">Opening soon</button>
+      </div>
+      <p class="note" id="signup-note">Sign-ups are not open yet. Nothing you type here is saved or sent.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper alt" id="features">
+  <h2 class="plaque">Features</h2>
+  <div class="carousel">
+    <button class="arrow prev" type="button" aria-label="Previous feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3L6 12l10 9z" fill="#1B1030"/></svg></button>
+    <div class="track" id="track" tabindex="0" aria-label="Features, scroll sideways">
+      <figure class="shot"><div class="im"><img src="assets/game-home.png" width="390" height="844" alt="The Breakroom: Grim Jr. in the middle, the coffee bar, the Sanctum, the Bone Forge and a Start Shift button" loading="lazy"></div><figcaption><h3>Clock in</h3><p>Start a shift from the Breakroom. He walks, the days tick by, and things start wanting a word.</p></figcaption></figure>
+      <figure class="shot"><div class="im"><img src="assets/game-shift.png" width="390" height="844" alt="Day 1 of a shift: Grim Jr. walking through a moonlit graveyard with his scythe, and the shift log underneath" loading="lazy"></div><figcaption><h3>One thumb. Big scythe.</h3><p>He walks and fights on his own. You decide what kind of Death he grows into.</p></figcaption></figure>
+      <figure class="shot"><div class="im"><img src="assets/game-skills.png" width="390" height="844" alt="A meeting with The Client Who Won't Die, with a grid of fifteen skills to pick from" loading="lazy"></div><figcaption><h3>Build a run</h3><p>Frost, shadow, bone, toxic or holy. Pick your skills and no two shifts play the same.</p></figcaption></figure>
+      <figure class="shot"><div class="im"><img src="assets/game-forge.png" width="390" height="844" alt="The Bone Forge: Grim Jr. with his gear slots, stats and the workshop rule" loading="lazy"></div><figcaption><h3>Forge and train</h3><p>You will lose. That is the plan. Forge, merge and train, then go back and win.</p></figcaption></figure>
+      <figure class="shot"><div class="im"><img src="assets/game-sanctum.png" width="390" height="844" alt="The Soul Sanctum with three jars and the fusion pedestal" loading="lazy"></div><figcaption><h3>Collect spirits</h3><p>Open jars in the Sanctum, fuse the spirits you find, and put the best ones on duty.</p></figcaption></figure>
+      <figure class="shot"><div class="im"><img src="assets/game-spring.png" width="390" height="844" alt="Grim Jr. soaking in a glowing green hot spring" loading="lazy"></div><figcaption><h3>Breaks are permitted</h3><p>Off the clock, the hot spring brews Soul Essence while he soaks.</p></figcaption></figure>
+    </div>
+    <button class="arrow next" type="button" aria-label="Next feature"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3l10 9-10 9z" fill="#1B1030"/></svg></button>
+  </div>
+  <p class="note">Screens from the build in development, captured 11 November 2026. Things will change.</p>
+  <p style="margin:22px 0 0"><a class="more" href="about.html">Story, cast and questions</a></p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span class="studio">ORY Studios</span>
+      <a href="https://www.youtube.com/channel/UCicF2tfvihn7ahWbzK9Pwtg" rel="noopener">YouTube</a>
+      <a href="mailto:support@orynn.io">support@orynn.io</a>
+    </div>
+    <p>Grim Jr. Rise! is in development. Grim Jr. and all characters shown are original to this game. © 2026 ORY Studios.</p>
+    <p>Privacy: this site sets no cookies, has no trackers, loads nothing from other sites and collects nothing. Back in 5 minutes.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var track=document.getElementById('track'); if(!track) return;
+  var shots=[].slice.call(track.querySelectorAll('.shot'));
+  function centre(){var m=track.scrollLeft+track.clientWidth/2,best=0,d=1e9;
+    shots.forEach(function(s,i){var c=s.offsetLeft+s.offsetWidth/2,x=Math.abs(c-m);if(x<d){d=x;best=i}});
+    shots.forEach(function(s,i){s.classList.toggle('on',i===best)});return best}
+  function go(n){var i=Math.max(0,Math.min(shots.length-1,centre()+n)),s=shots[i];
+    track.scrollTo({left:s.offsetLeft+s.offsetWidth/2-track.clientWidth/2,behavior:'smooth'})}
+  var t;track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(centre,40)},{passive:true});
+  document.querySelector('.arrow.prev').addEventListener('click',function(){go(-1)});
+  document.querySelector('.arrow.next').addEventListener('click',function(){go(1)});
+  window.addEventListener('resize',centre);
+  /* start on the second card so there is a neighbour on each side */
+  var s=shots[1];track.scrollLeft=s.offsetLeft+s.offsetWidth/2-track.clientWidth/2;centre();
+  /* tab highlight */
+  var tabs=[].slice.call(document.querySelectorAll('.tabs a')),ids=['home','watch','register','features'];
+  function mark(){var y=window.scrollY+140,cur=0;ids.forEach(function(id,i){var e=document.getElementById(id);if(e&&e.offsetTop<=y)cur=i});
+    tabs.forEach(function(a,i){a.classList.toggle('on',i===cur)})}
+  window.addEventListener('scroll',mark,{passive:true});mark();
+})();
+</script>
+</body>
+</html>

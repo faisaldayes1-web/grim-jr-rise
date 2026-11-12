@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grim Jr. Rise! — story, cast and questions</title>
+<meta name="description" content="Death went out for milk and never came back. His very small son got the job. A cute-spooky idle adventure roguelike: collect, grow stronger, rise.">
+<meta name="theme-color" content="#2E1A48">
+<link rel="icon" type="image/png" href="assets/icon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<!-- Hosting plan: under orynn.io through the ORY website pipeline; exact address to be assigned (see HOSTING.md).
+     Social preview: set og:image and og:url to full web addresses once the address exists. Image to use: assets/press/grim-jr-rise-keyart-1920x1080.jpg -->
+<meta property="og:title" content="Grim Jr. Rise!">
+<meta property="og:description" content="Death went out for milk. His son got the job.">
+<!-- Site by claude-faisallaptop/grim-jr-brand. Public version, 11 November 2026. No scripts, no trackers, no cookies, no external requests. -->
+<style>
+@font-face{font-family:"Fredoka";src:url("assets/fonts/fredoka-700.ttf") format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:"Nunito";src:url("assets/fonts/nunito-700.ttf") format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:"Nunito";src:url("assets/fonts/nunito-900.ttf") format("truetype");font-weight:900;font-display:swap}
+:root{
+  --ink:#1B1030; --night:#2E1A48; --deep:#251539; --edge:#3d2763; --purple:#5B2FB8; --violet:#8E5BE8; --lilac:#C9A2FF;
+  --mint:#7CFFB2; --teal:#3FB8A0; --cream:#FFF8E7; --bone:#E9DCC0; --gold:#F6C445; --amber:#D9952B; --coral:#FF6B5A;
+  --head:"Fredoka","Baloo 2","Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif;
+  --body:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--body);font-weight:700;font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--mint)}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:68px 0;position:relative}
+.eyebrow{display:inline-block;font-family:var(--head);letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--ink);background:var(--gold);border:3px solid var(--ink);border-radius:9px;padding:2px 11px;margin-bottom:14px;transform:rotate(-3deg)}
+h2{font-size:clamp(30px,6vw,46px);margin-bottom:18px}
+.lede{font-size:clamp(18px,2.6vw,21px);color:var(--lilac);max-width:62ch}
+.note{font-size:13.5px;color:#a892cf}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:10px;top:10px;z-index:99;background:var(--cream);color:var(--ink);padding:8px 12px;border-radius:8px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* section colours and the notch: each coloured section hangs a scalloped edge into the next */
+.s-night{background:var(--night)} .s-ink{background:var(--ink)} .s-deep{background:var(--deep)}
+.notch{position:absolute;left:0;right:0;top:0;height:14px;pointer-events:none;background:radial-gradient(circle at 14px 0,var(--c) 13.2px,transparent 14px) 0 0/28px 14px repeat-x}
+
+/* draft ribbon */
+.draft{background:var(--gold);color:var(--ink);text-align:center;font-size:13px;font-weight:900;padding:6px 12px;border-bottom:3px solid var(--ink)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(27,16,48,.94);border-bottom:3px solid var(--edge)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:58px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-size:19px;color:var(--cream);text-decoration:none;white-space:nowrap}
+.brand img{width:36px;height:36px;border-radius:10px;border:2px solid var(--ink)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{display:block;padding:8px 11px;border-radius:10px;color:var(--lilac);text-decoration:none;font-size:15px}
+.nav ul a:hover{background:var(--edge);color:var(--cream)}
+.nav .btn{font-size:15px;padding:6px 14px;border-width:3px;border-radius:12px;box-shadow:0 4px 0 var(--teal),0 4px 0 3px var(--ink);margin-bottom:4px}
+
+/* buttons: mint with a hard lip */
+.btn{display:inline-block;font-family:var(--head);font-size:20px;text-decoration:none;color:var(--ink);background:var(--mint);
+  border:4px solid var(--ink);border-radius:18px;padding:12px 26px;box-shadow:0 6px 0 var(--teal),0 6px 0 4px var(--ink);transition:transform .08s,box-shadow .08s}
+.btn:hover,.btn:focus-visible{transform:translateY(2px);box-shadow:0 4px 0 var(--teal),0 4px 0 4px var(--ink)}
+.btn.ghost{background:var(--violet);color:var(--cream);box-shadow:0 6px 0 var(--purple),0 6px 0 4px var(--ink)}
+.btn.ghost:hover{box-shadow:0 4px 0 var(--purple),0 4px 0 4px var(--ink)}
+
+/* hero */
+.hero{position:relative;background:#2a1650;line-height:0;overflow:hidden}
+.hero picture img{width:100%;max-height:86vh;object-fit:cover;object-position:50% 46%}
+.hero .logo{position:absolute;left:3.5%;top:5%;width:min(27%,380px);margin:0;filter:drop-shadow(0 8px 0 rgba(27,16,48,.45))}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,transparent,var(--night))}
+.pitch{background:var(--night);text-align:center;padding:10px 0 62px}
+.tag{font-family:var(--head);font-size:clamp(25px,4.6vw,42px);line-height:1.14;margin-bottom:14px}
+.pitch .lede{margin:0 auto 26px}
+.cta{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;list-style:none;padding:0;margin:30px 0 0}
+.chips li{border:3px solid var(--edge);background:var(--ink);border-radius:999px;padding:5px 14px;font-size:14px;color:var(--lilac)}
+
+/* trailer slot */
+.trailer .frame{position:relative;max-width:860px;margin:26px auto 0;border:5px solid var(--ink);outline:4px solid var(--edge);border-radius:26px;overflow:hidden;background:var(--night)}
+.trailer .frame img{width:100%;opacity:.55}
+.trailer .play{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.trailer .play span{display:block}
+.trailer .tri{width:86px;height:86px;border-radius:50%;background:var(--cream);border:5px solid var(--ink);box-shadow:0 7px 0 var(--bone),0 7px 0 5px var(--ink);margin:0 auto 16px;position:relative}
+.trailer .tri::after{content:"";position:absolute;left:33px;top:23px;border:20px solid transparent;border-left:30px solid var(--ink);border-right:0}
+.placeholder{display:inline-block;background:var(--gold);color:var(--ink);font-size:12.5px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:8px;border:3px solid var(--ink);transform:rotate(-2deg)}
+
+.theme{display:flex;align-items:center;gap:18px;max-width:640px;margin:34px auto 0;text-align:left;background:var(--night);border:4px solid var(--edge);border-radius:22px;padding:16px 20px}
+.theme img{width:92px;flex:0 0 auto;transform:rotate(-4deg)}
+.theme h3{font-size:21px;color:var(--mint);margin-bottom:2px}
+.theme p{margin:0 0 10px;font-size:15px;color:var(--lilac)}
+.theme audio{width:100%;height:40px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:34px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--ink);border:4px solid var(--edge);border-radius:20px;padding:22px 18px 16px;counter-increment:s;position:relative}
+.steps li::before{content:counter(s);position:absolute;top:-16px;left:16px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-family:var(--head);transform:rotate(-4deg)}
+.steps h3{font-size:21px;margin:6px 0 6px;color:var(--mint)}
+.steps p{margin:0;font-size:15.5px;color:var(--lilac)}
+
+/* memo: cream paper with a notched lower edge */
+.memo{background:var(--cream);color:var(--ink);border:4px solid var(--ink);border-bottom:0;border-radius:8px 8px 0 0;padding:20px 22px 12px;position:relative;margin-bottom:14px;filter:drop-shadow(7px 9px 0 rgba(0,0,0,.32))}
+.memo::after{content:"";position:absolute;left:-4px;right:-4px;bottom:-14px;height:14px;background:radial-gradient(circle at 12px 0,var(--cream) 9.5px,var(--ink) 10px,var(--ink) 13.4px,transparent 14px) 0 0/24px 14px repeat-x}
+.memo::before{content:"MEMO";position:absolute;top:-15px;left:18px;background:var(--coral);color:var(--cream);font-family:var(--head);font-size:13px;letter-spacing:.14em;padding:3px 12px;border:3px solid var(--ink);border-radius:8px;transform:rotate(-3deg)}
+.memo p{margin:0 0 .5em}
+.memo .from{font-size:13px;color:#5a4a78;text-transform:uppercase;letter-spacing:.08em;font-weight:900}
+.memos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:34px 24px;margin-top:40px;align-items:start}
+.memos .memo:nth-child(2){transform:rotate(1.2deg)}
+.memos .memo:nth-child(3){transform:rotate(-1deg)}
+
+/* rise */
+.rise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.tile{background:var(--night);border:4px solid var(--edge);border-radius:22px;padding:18px 18px 20px;display:flex;flex-direction:column}
+.tile .row{display:flex;align-items:flex-end;justify-content:center;gap:6px;height:128px;margin-bottom:12px}
+.tile .row img{max-height:128px;width:auto;min-width:0;flex:0 1 auto}
+.tile h3{font-size:22px;color:var(--mint);margin-bottom:6px}
+.tile p{font-size:15.5px;color:var(--lilac);margin:0}
+.tile .n{font-family:var(--head);color:var(--gold);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.ladder{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 14px;margin:36px 0 0;padding:0;list-style:none;font-family:var(--head)}
+.ladder li{border:4px solid var(--ink);border-radius:14px;padding:8px 16px;background:var(--violet);box-shadow:0 5px 0 var(--purple),0 5px 0 4px var(--ink)}
+.ladder li:first-child{background:var(--bone);color:var(--ink);box-shadow:0 5px 0 #c9b998,0 5px 0 4px var(--ink)}
+.ladder li:last-child{background:var(--gold);color:var(--ink);box-shadow:0 5px 0 var(--amber),0 5px 0 4px var(--ink)}
+.ladder .arrow{border:0;background:none;box-shadow:none;padding:0;color:var(--lilac)}
+
+/* meet */
+.meet .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.meet .pic{justify-self:center;background:radial-gradient(circle at 50% 60%,#4a2a86 0 55%,transparent 56%);padding:10px}
+.meet .pic img{width:min(300px,62vw)}
+.file{list-style:none;padding:0;margin:20px 0 0;border:4px solid var(--edge);border-radius:18px;overflow:hidden}
+.file li{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:11px 16px;background:var(--night)}
+.file li:nth-child(even){background:var(--deep)}
+.file b{color:var(--gold);font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.moods{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px}
+.moods figure{margin:0;text-align:center;background:var(--night);border:4px solid var(--edge);border-radius:18px;padding:14px 8px 10px}
+.moods img{height:74px;width:auto;margin:0 auto 8px}
+.moods figcaption{font-size:13.5px;color:var(--lilac)}
+.moods-title{margin-top:44px;font-size:24px}
+
+/* story */
+.story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start;margin-top:10px}
+.story-grid p{color:var(--lilac);font-size:18px}
+.story-grid p b{color:var(--cream)}
+.sticky{background:var(--gold);color:var(--ink);border:4px solid var(--ink);border-radius:6px 6px 22px 6px;padding:16px 18px;font-family:var(--head);font-size:17px;line-height:1.3;text-transform:uppercase;letter-spacing:.03em;box-shadow:6px 7px 0 rgba(0,0,0,.3);transform:rotate(2.5deg);max-width:300px}
+.sticky + .sticky{transform:rotate(-3deg);margin:22px 0 0 40px}
+.sticky small{display:block;font-family:var(--body);font-weight:900;text-transform:none;letter-spacing:0;font-size:12.5px;margin-top:8px;color:#5c4310}
+
+.doorpic{margin:0 0 26px}
+.doorpic img{border:5px solid var(--ink);outline:4px solid var(--edge);border-radius:22px;width:100%}
+.doorpic figcaption{font-size:14px;color:var(--lilac);margin-top:10px;text-align:center}
+
+/* chapters */
+.chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.chapter{border:4px solid var(--edge);border-radius:22px;overflow:hidden;background:var(--ink)}
+.chapter .im{aspect-ratio:3/2;background:var(--deep) center/cover;position:relative}
+.chapter .num{position:absolute;left:12px;top:12px;width:42px;height:42px;border-radius:12px;background:var(--mint);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-family:var(--head);font-size:22px;box-shadow:0 4px 0 var(--teal),0 4px 0 3px var(--ink);transform:rotate(-3deg)}
+.chapter .body{padding:16px 18px 18px}
+.chapter h3{font-size:21px;margin-bottom:4px}
+.chapter .days{font-size:12.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:900;margin-bottom:8px}
+.chapter p{font-size:15px;color:var(--lilac);margin:0}
+.chapter.locked .im{display:grid;place-items:center;font-family:var(--head);font-size:70px;color:var(--edge)}
+.chapter.locked .num{background:var(--edge);color:var(--lilac);box-shadow:0 4px 0 #2a1a47,0 4px 0 3px var(--ink)}
+
+/* cast */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:28px}
+.card{background:var(--ink);border:4px solid var(--edge);border-radius:22px;padding:16px 16px 18px;text-align:center}
+.card .im{height:150px;display:grid;place-items:center;margin-bottom:8px}
+.card .im img{max-height:150px;width:auto}
+.card h3{font-size:21px;margin-bottom:2px}
+.card .role{font-size:12.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:900;margin-bottom:8px}
+.card p{font-size:15px;color:var(--lilac);margin:0}
+.card.locked .im img{filter:brightness(0) opacity(.55) drop-shadow(0 0 10px var(--mint))}
+
+/* shots */
+.shots{display:flex;gap:18px;overflow-x:auto;padding:8px 20px 22px;margin:26px -20px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shots figure{flex:0 0 auto;margin:0;scroll-snap-align:center;width:240px}
+.shots figure.wide{width:340px}
+.shots img{border:5px solid var(--ink);outline:3px solid var(--edge);border-radius:22px;width:100%;background:var(--night)}
+.shots figcaption{font-size:14px;color:var(--lilac);margin-top:10px;text-align:center}
+
+/* stickers */
+.stickers{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 26px;margin-top:30px}
+.stickers img{height:96px;width:auto;filter:drop-shadow(4px 5px 0 rgba(0,0,0,.3))}
+.stickers img:nth-child(odd){transform:rotate(-4deg)}
+.stickers img:nth-child(even){transform:rotate(3deg)}
+
+/* faq */
+.faq{max-width:780px;margin:26px auto 0}
+.faq details{border:4px solid var(--edge);border-radius:18px;background:var(--night);margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:16px 52px 16px 20px;font-family:var(--head);font-size:19px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:11px;width:30px;height:30px;border-radius:9px;background:var(--mint);color:var(--ink);border:3px solid var(--ink);display:grid;place-items:center;font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–";background:var(--gold)}
+.faq details p{padding:0 20px 16px;margin:0;color:var(--lilac)}
+
+/* signup */
+.signup .box{background:var(--night);border:4px dashed var(--gold);border-radius:26px;padding:30px 24px;max-width:640px;margin:0 auto;text-align:center}
+.signup .form{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0 12px}
+.signup input{flex:1 1 230px;min-width:0;font:inherit;padding:12px 16px;border-radius:14px;border:4px solid var(--ink);background:var(--cream);color:var(--ink)}
+.signup button{font-family:var(--head);font-size:18px;border:4px solid var(--ink);border-radius:14px;padding:12px 22px;background:#6b5a8a;color:#d8cfe8;cursor:not-allowed}
+
+/* links, press */
+.pills{list-style:none;display:flex;flex-wrap:wrap;gap:12px;padding:0;margin:22px 0 0}
+.pills li>*{display:flex;align-items:center;gap:8px;border:4px solid var(--edge);border-radius:14px;padding:10px 16px;background:var(--night);color:var(--lilac);text-decoration:none}
+.pills a:hover{border-color:var(--mint);color:var(--cream)}
+.pills em{font-style:normal;font-size:11.5px;background:var(--edge);color:var(--cream);border-radius:6px;padding:2px 7px;text-transform:uppercase;letter-spacing:.06em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two h2{font-size:clamp(26px,4.4vw,34px)}
+.facts{margin:18px 0 0;padding:0;list-style:none;color:var(--lilac);font-size:15.5px}
+.facts li{padding:6px 0;border-bottom:2px dashed var(--edge)}
+.facts b{color:var(--cream)}
+footer{background:var(--ink);border-top:4px solid var(--edge);padding:30px 0 50px;color:#a892cf;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+footer img{width:64px;border-radius:16px;border:3px solid var(--edge)}
+footer p{max-width:74ch;margin-bottom:.7em}
+
+@media (max-width:900px){
+  .nav ul{display:none}
+  .nav .btn{margin-left:auto}
+  .rise-grid{grid-template-columns:repeat(2,1fr)}
+  .chapters{grid-template-columns:1fr 1fr}
+  .moods{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:760px){
+  section{padding:52px 0}
+  .hero picture img{max-height:none}
+  .hero .logo{width:56%;left:22%;top:2.5%}
+  .hero::after{height:12%}
+  .pitch{padding-top:4px}
+  .meet .wrap,.story-grid,.two{grid-template-columns:1fr}
+  .file li{grid-template-columns:1fr;gap:0}
+  .cards{grid-template-columns:repeat(2,1fr);gap:12px}
+  .card{padding:12px 10px 14px}
+  .card .im{height:112px}.card .im img{max-height:112px}
+  .card h3{font-size:18px}.card p{font-size:14px}
+  .memos .memo{transform:none!important}
+  .rise-grid,.chapters{grid-template-columns:1fr}
+  .tile .row{height:112px}.tile .row img{max-height:112px}
+  .sticky + .sticky{margin-left:20px}
+  .stickers img{height:74px}
+  .brand span{display:none}
+  .theme{flex-direction:column;text-align:center}
+  footer .wrap{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#game">Skip to content</a>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon-64.png" width="64" height="64" alt=""><span>Grim Jr. Rise!</span></a>
+    <ul>
+      <li><a href="#game">The job</a></li>
+      <li><a href="#rise">Rise</a></li>
+      <li><a href="#meet">Grim Jr.</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#screens">Screens</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn" href="#signup">Get the memo</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <picture>
+    <source media="(max-width:760px)" srcset="assets/hero-tall.jpg" width="1080" height="1380">
+    <img src="assets/hero-wide.jpg" width="1920" height="1080" alt="Grim Jr., a small reaper in a purple hood with a skull face and no mouth, stands in the Breakroom doorway holding a scythe taller than he is. A queue of ghostly clients waits in front of him.">
+  </picture>
+  <h1 class="logo"><img src="assets/logo-rise.png" width="900" height="581" alt="Grim Jr. Rise!"></h1>
+</header>
+
+<div class="pitch">
+  <div class="wrap">
+    <p class="tag">Death went out for milk.<br>His son got the job.</p>
+    <p class="lede">Dad said five minutes. That was a while ago. Pick up the scythe in a cute-spooky idle adventure roguelike: collect souls, gear, spirits and mounts, come back stronger every shift, and rise.</p>
+    <div class="cta">
+      <a class="btn" href="#signup">Tell me when it opens</a>
+      <a class="btn ghost" href="#rise">How do I rise?</a>
+    </div>
+    <ul class="chips" aria-label="At a glance">
+      <li>Idle roguelike</li><li>One-thumb play</li><li>Portrait</li><li>iPhone and Android</li><li>No mouth</li><li>No milk</li>
+    </ul>
+  </div>
+</div>
+
+<main>
+
+<section class="trailer s-ink">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow">Training video</span>
+    <h2>Watch the trailer.</h2>
+    <div class="frame">
+      <video controls preload="none" playsinline poster="assets/back-in-5-poster.jpg" width="1280" height="720" style="width:100%;height:auto;display:block;opacity:1"><source src="assets/back-in-5.mp4" type="video/mp4">Your browser cannot play this video.</video>
+    </div>
+    <p class="note" style="margin-top:14px">"Back in 5" · 45 seconds.</p>
+    <div class="theme">
+      <img src="assets/emo_grim.png" width="220" height="170" alt="" loading="lazy">
+      <div>
+        <h3>Meanwhile, the theme tune</h3>
+        <p>One minute. Starts as hold music. Does not stay that way.</p>
+        <audio controls preload="none" src="assets/grim-jr-rise-theme.mp3">Your browser cannot play this audio.</audio>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s-night" id="game">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <span class="eyebrow">The job</span>
+    <h2>Somebody has to be Death.</h2>
+    <p class="lede">With Death at the shop, nobody has been reaping. The queue at the exit has stopped and the dead are getting comfortable. The scythe may only be held by a Grim. There is one other Grim. You are his thumb.</p>
+    <ol class="steps">
+      <li><h3>Clock in</h3><p>Start a shift from the Breakroom. He walks, the days tick by, and from Day 6 things start wanting a word.</p></li>
+      <li><h3>Build a run</h3><p>Draft skills as you level. Frost, shadow, bone, toxic or holy: no two shifts play the same.</p></li>
+      <li><h3>Reap or spare</h3><p>A knight who misses his family. A nervous wisp. A customer who wants the manager. The job says reap. It is your call.</p></li>
+      <li><h3>Hit the wall</h3><p>Around Day 35 something much bigger than him is waiting. You will lose. That is the plan.</p></li>
+      <li><h3>Train, then rise</h3><p>Take the loot home. Forge, merge, train, soak in the hot spring. Go back and win.</p></li>
+    </ol>
+    <div class="memos">
+      <div class="memo"><p class="from">From: HR · Re: Welcome aboard</p><p>HR is delighted to have you. Please find enclosed your signing bonus. Do not spend it on the vending machine. It is haunted.</p></div>
+      <div class="memo"><p class="from">From: HR · Re: Your father</p><p>Still out. The note says five minutes. We have no reason to doubt the note. We have laminated the note.</p></div>
+      <div class="memo"><p class="from">From: Management · Commendation (form 12-B)</p><p>The backlog is cleared. A replacement backlog has been ordered. Well done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s-ink" id="rise">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap">
+    <span class="eyebrow">Career development</span>
+    <h2>Start at the bottom. Rise.</h2>
+    <p class="lede">Every shift sends him home with more than he left with. Collect it, combine it, and come back as a slightly bigger problem.</p>
+    <div class="rise-grid">
+      <article class="tile">
+        <div class="row"><img src="assets/hero_basic.png" width="275" height="300" alt="Grim Jr. with the intern scythe" loading="lazy"><img src="assets/hero_halberd.png" width="275" height="300" alt="with an ice halberd" loading="lazy"><img src="assets/hero_hammer.png" width="288" height="300" alt="with a bone hammer" loading="lazy"></div>
+        <div class="n">5 scythe forms</div><h3>Outgrow the scythe</h3>
+        <p>Pick three skills of a kind and the intern scythe becomes a halberd, a hammer, twin sickles, a flail or a gavel.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/ally_deathKnight.png" width="325" height="340" alt="Chibi Death Knight" loading="lazy"><img src="assets/ally_postalDragon.png" width="229" height="221" alt="A small postal dragon" loading="lazy"><img src="assets/ally_espressoBanshee.png" width="182" height="229" alt="A banshee holding an espresso" loading="lazy"></div>
+        <div class="n">7 lantern fusions</div><h3>Make colleagues</h3>
+        <p>Two souls in his lantern fuse into a ghost who fights beside him. HR was not consulted.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/item_eq_ns_weapon.png" width="126" height="150" alt="A set weapon" loading="lazy"><img src="assets/item_eq_au_cloak.png" width="121" height="150" alt="A set cloak" loading="lazy"><img src="assets/relic_lantern.png" width="86" height="150" alt="A relic lantern" loading="lazy"><img src="assets/trophy_mug.png" width="149" height="150" alt="A trophy mug" loading="lazy"></div>
+        <div class="n">Gear, sets, relics, trophies</div><h3>Forge and merge</h3>
+        <p>Three of a kind become one of the next tier. Wear a full set and the bonuses stack.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/mount_pony.png" width="302" height="222" alt="Skeletal pony" loading="lazy"><img src="assets/mount_snail.png" width="283" height="208" alt="A snail with a moustache" loading="lazy"><img src="assets/mount_cerberus.png" width="300" height="218" alt="A two-headed puppy" loading="lazy"></div>
+        <div class="n">Stabled for now</div><h3>Ride to work, later</h3>
+        <p>The mounts are put away while he learns to walk the route. When they come back: a skeletal pony, a snail with a moustache, and one day, Dad's dragon.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/icon_jar_gold.png" width="96" height="116" alt="A soul jar" loading="lazy"><img src="assets/ally_lanternSquire.png" width="236" height="228" alt="Lantern Squire" loading="lazy"><img src="assets/ally_graniteGargoyle.png" width="210" height="229" alt="A granite gargoyle" loading="lazy"></div>
+        <div class="n">12 spirits</div><h3>Collect spirits</h3>
+        <p>Open jars in the Sanctum, level the spirits you find, and put the best ones on duty.</p>
+      </article>
+      <article class="tile">
+        <div class="row"><img src="assets/banner_stairwell.jpg" width="900" height="300" alt="A stairwell going up into the dark" loading="lazy" style="border-radius:14px;border:3px solid var(--ink)"></div>
+        <div class="n">Overtime</div><h3>Stay late</h3>
+        <p>Night Jobs, the Stairwell, the Sub-Basement, the Reaper Rankings. Overtime is optional. It is also where the good loot is.</p>
+      </article>
+    </div>
+    <ul class="ladder" aria-label="Where this is going">
+      <li>Intern</li><li class="arrow" aria-hidden="true">→</li><li>Stronger intern</li><li class="arrow" aria-hidden="true">→</li><li>Alarmingly strong intern</li><li class="arrow" aria-hidden="true">→</li><li>Allowed on the dragon</li>
+    </ul>
+  </div>
+</section>
+
+<section class="meet s-night" id="meet">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <div class="pic"><img src="assets/grim-jr.png" width="585" height="640" alt="Grim Jr. standing with his scythe and lantern." loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Employee record</span>
+      <h2>Meet Grim Jr.</h2>
+      <p class="lede">Death's son. The smallest person in the building and the only one doing his job. He puts a clean glass out every night for when the milk arrives.</p>
+      <ul class="file">
+        <li><b>Position</b><span>Intern (Acting Death).</span></li>
+        <li><b>Reports to</b><span>Dad. Dad is at the shop.</span></li>
+        <li><b>Equipment</b><span>One scythe (Dad's, on loan, tall). One soul lantern. Sensible shoes.</span></li>
+        <li><b>Says</b><span>Nothing. He has no mouth. He files shift notes.</span></li>
+        <li><b>Strengths</b><span>Turns up.</span></li>
+        <li><b>Weaknesses</b><span>Sad knights. Ghost puppies.</span></li>
+        <li><b>Outlook</b><span>Not worried. The shop must be far.</span></li>
+        <li><b>Latest note</b><span>"Found a bench. Sat on it. Felt things."</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap" style="display:block">
+    <h3 class="moods-title">No mouth. Five moods. It is all in the eyes.</h3>
+    <div class="moods">
+      <figure><img src="assets/emo_grim.png" width="220" height="170" alt="Hooded skull, eyes open" loading="lazy"><figcaption>On shift</figcaption></figure>
+      <figure><img src="assets/emo_curious.png" width="220" height="175" alt="Hooded skull, one eye larger" loading="lazy"><figcaption>Hm</figcaption></figure>
+      <figure><img src="assets/emo_ow.png" width="220" height="176" alt="Hooded skull, eyes squeezed shut" loading="lazy"><figcaption>Ow</figcaption></figure>
+      <figure><img src="assets/emo_tired.png" width="220" height="187" alt="Hooded skull, eyes half closed" loading="lazy"><figcaption>Day 19</figcaption></figure>
+      <figure><img src="assets/emo_sleep.png" width="220" height="170" alt="Hooded skull, eyes gently closed" loading="lazy"><figcaption>Hot spring</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s-ink" id="story">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap">
+    <span class="eyebrow">How we got here</span>
+    <h2>Gone for milk. Back in 5 min.</h2>
+    <div class="story-grid">
+      <div>
+        <p>For as long as there has been an ending, <b>one person has handled it.</b> Death did every job himself and never took a day off.</p>
+        <p>Then one evening he looked in the fridge, put on his good hood, and stuck a note on his office door. <b>That was a while ago.</b> HR will not say how long. HR has laminated the note.</p>
+        <p>With nobody reaping, the queue at the exit stopped. The dead stood about, got bored, got jobs, and got in the way. They appealed. They complained. <b>One of them made a sign.</b></p>
+        <p>HR read the rulebook. The scythe may only be held by a Grim. HR checked the files. <b>There is exactly one other Grim.</b> He was found on a chair outside his father's office, holding a clean glass, waiting.</p>
+        <p>HR cannot make a child Death. There are forms. So his badge says <b>Intern (Acting Death)</b>, the scythe is still set to his father's height, and his robe has already been patched twice. He is not worried. The shop must be far.</p>
+      </div>
+      <div>
+        <figure class="doorpic"><img src="assets/story-door.jpg" width="900" height="867" alt="A heavy purple office door with a blank note stuck to it. Beside it, Grim Jr. sits on a small chair holding an empty glass, feet not reaching the floor." loading="lazy"><figcaption>Outside Dad's office. Still waiting.</figcaption></figure>
+        <div class="sticky" style="background:var(--cream);text-transform:none;font-size:20px">Gone for milk.<br>Back in 5 min.<small>— Dad</small></div>
+        <div class="sticky">Day 1. Dad went for milk. Waiting.<small>Shift note, G. Jr.</small></div>
+        <div class="sticky" style="transform:rotate(2deg);margin:22px 0 0 10px">Day 5. Customer wanted manager. Manager is at the shop. I am covering.<small>Shift note, G. Jr.</small></div>
+      </div>
+    </div>
+    <h3 style="margin-top:54px;font-size:26px">The route so far</h3>
+    <div class="chapters">
+      <article class="chapter"><div class="im" style="background-image:url('assets/ch1.jpg')" role="img" aria-label="A moonlit graveyard"><span class="num">1</span></div><div class="body"><h3>Whispering Boneyard</h3><div class="days">50 days</div><p>The easiest route in the Underworld. Nobody has cleared it since Dad left. You will not clear it first time either.</p></div></article>
+      <article class="chapter"><div class="im" style="background-image:url('assets/ch2.jpg')" role="img" aria-label="An office corridor of filing cabinets"><span class="num">2</span></div><div class="body"><h3>The Department of Unfinished Business</h3><div class="days">60 days</div><p>The backlog was never out in the field. It is the office. The mail machine thinks you are an envelope.</p></div></article>
+      <article class="chapter locked"><div class="im"><span class="num">3</span>?</div><div class="body"><h3>Upstairs</h3><div class="days">Later</div><p>There is one form to deliver to the top floor. The lift is out of order.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="s-night" id="cast">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <span class="eyebrow">Staff &amp; clients</span>
+    <h2>Everyone else has a reason not to work.</h2>
+    <div class="cards">
+      <article class="card"><div class="im"><img src="assets/npc_goblin.png" width="285" height="331" alt="A green goblin in an apron" loading="lazy"></div><h3>The Coffee Goblins</h3><div class="role">Breakroom</div><p>Run the only room that works. Out of cups. Out of milk.</p></article>
+      <article class="card"><div class="im"><img src="assets/npc_smith.png" width="276" height="322" alt="A skull-faced smith with a red bandana and a hammer" loading="lazy"></div><h3>The Smith</h3><div class="role">Bone Forge</div><p>Says nothing. Fixes everything.</p></article>
+      <article class="card"><div class="im"><img src="assets/emo_pony.png" width="220" height="163" alt="A small skeletal pony with a saddle" loading="lazy"></div><h3>Mini Skeletal Pony</h3><div class="role">Company transport, stabled</div><p>Off duty for now. Still eats paperwork.</p></article>
+      <article class="card"><div class="im"><img src="assets/npc_knight.png" width="262" height="295" alt="A tired knight sitting against a gravestone" loading="lazy"></div><h3>The Weary Vanguard</h3><div class="role">Client, homesick</div><p>Misses his family. The form says reap. You have two buttons.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_karenSlime.png" width="280" height="273" alt="A green slime with blonde hair and sunglasses, frowning" loading="lazy"></div><h3>The Demanding Customer</h3><div class="role">Client, loud</div><p>Would like to speak to whoever is in charge of death.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_wisp.png" width="230" height="278" alt="A small mint-green ghost flame in a scarf" loading="lazy"></div><h3>The Nervous Wisp</h3><div class="role">Client, anxious</div><p>Scared of being reaped. Also of being spared.</p></article><article class="card"><div class="im" style="font-family:var(--head);font-size:64px;color:var(--edge)">?</div><h3>Big Brother Ogre</h3><div class="role">Day 35</div><p>His little brother was asleep on a chest. This one is awake.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_paladin.png" width="313" height="350" alt="A gold-armoured paladin holding a sign that says Do Not Reap" loading="lazy"></div><h3>The Cursed Paladin</h3><div class="role">Client, refusing</div><p>Blocks the chapel door with a sign. That is not how signs work.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_taxKnight.png" width="297" height="350" alt="A round armoured knight holding a ledger" loading="lazy"></div><h3>The Tax Knight</h3><div class="role">Client, auditing</div><p>Has found a discrepancy in the graveyard. It is you.</p></article>
+      <article class="card"><div class="im" style="font-family:var(--head);font-size:64px;color:var(--edge)">?</div><h3>The Bone Captain</h3><div class="role">Day 50</div><p>Has guarded this crypt for six hundred years. Nobody has told him why.</p></article>
+      <article class="card"><div class="im"><img src="assets/npc_ectoPup.png" width="298" height="282" alt="A mint-green ghost puppy" loading="lazy"></div><h3>The Ecto-Pup</h3><div class="role">Character test</div><p>You know what the right answer is.</p></article>
+      <article class="card"><div class="im"><img src="assets/mob_pendulum.png" width="271" height="350" alt="A grandfather clock with an angry face and a robe" loading="lazy"></div><h3>Director Pendulum</h3><div class="role">Management</div><p>A clock that will not let anyone clock out.</p></article>
+      <article class="card"><div class="im"><img src="assets/mount_dragon.png" width="360" height="168" alt="A small flying dragon made of bone, with purple wings and a glowing green eye" loading="lazy"></div><h3>Dad's dragon</h3><div class="role">Executive vehicle</div><p>The Ossuary Skydrake. Under a dust sheet in the stable. He is not allowed. Yet.</p></article>
+      <article class="card"><div class="im"><img src="assets/emo_stamp.png" width="182" height="220" alt="A rubber stamp" loading="lazy"></div><h3>Death</h3><div class="role">Dad</div><p>Out. Getting milk. Back in 5 minutes.</p></article>
+      <article class="card"><div class="im"><img src="assets/emo_coffee.png" width="220" height="194" alt="A mug of coffee" loading="lazy"></div><h3>HR</h3><div class="role">A department, not a person</div><p>Delighted to have you. Has never been found.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="s-ink" id="screens">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap">
+    <span class="eyebrow">Evidence</span>
+    <h2>A day at the office.</h2>
+    <p class="lede">Screens from the build in development. Things will change. The hot spring will not.</p>
+    <div class="shots" tabindex="0" aria-label="Screenshots, scroll sideways">
+      <figure><img src="assets/game-home.png" width="390" height="844" alt="The Breakroom: Grim Jr. in the middle, the coffee bar, the Sanctum, the Bone Forge and a Start Shift button" loading="lazy"><figcaption>The Breakroom</figcaption></figure>
+      <figure><img src="assets/game-shift.png" width="390" height="844" alt="Day 1 of a shift: Grim Jr. walking through a moonlit graveyard with his scythe" loading="lazy"><figcaption>One thumb. Big scythe.</figcaption></figure>
+      <figure><img src="assets/game-skills.png" width="390" height="844" alt="A meeting with The Client Who Won&#39;t Die, with a grid of skills to pick from" loading="lazy"><figcaption>Build a run</figcaption></figure>
+      <figure><img src="assets/game-forge.png" width="390" height="844" alt="The Bone Forge: Grim Jr. with his gear slots and stats" loading="lazy"><figcaption>Forge and train</figcaption></figure>
+      <figure><img src="assets/game-sanctum.png" width="390" height="844" alt="The Soul Sanctum with three jars and the fusion pedestal" loading="lazy"><figcaption>Collect spirits</figcaption></figure>
+      <figure><img src="assets/game-spring.png" width="390" height="844" alt="Grim Jr. soaking in a glowing green hot spring" loading="lazy"><figcaption>Breaks are permitted</figcaption></figure>
+    </div>
+    <h3 style="margin-top:50px;font-size:26px;text-align:center">Office supplies</h3>
+    <div class="stickers" aria-label="Stickers">
+      <img src="assets/emo_peek.png" width="220" height="111" alt="Grim Jr. peeking" loading="lazy">
+      <img src="assets/emo_donotreap.png" width="158" height="220" alt="A sign reading Do Not Reap" loading="lazy">
+      <img src="assets/emo_reap.png" width="217" height="220" alt="Reap button: a skull on purple" loading="lazy">
+      <img src="assets/emo_spare.png" width="217" height="220" alt="Spare button: a crown on gold" loading="lazy">
+      <img src="assets/emo_lantern.png" width="155" height="220" alt="The soul lantern" loading="lazy">
+      <img src="assets/emo_salute.png" width="169" height="220" alt="Grim Jr. saluting" loading="lazy">
+      <img src="assets/emo_hop.png" width="203" height="220" alt="Grim Jr. mid-hop" loading="lazy">
+      <img src="assets/emo_spring.png" width="220" height="184" alt="Grim Jr. in the hot spring" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="s-night" id="faq">
+  <div class="notch" style="--c:var(--ink)"></div>
+  <div class="wrap">
+    <div style="text-align:center"><span class="eyebrow">Frequently filed questions</span><h2>FAQ</h2></div>
+    <div class="faq">
+      <details><summary>What kind of game is it?</summary><p>An idle adventure roguelike you play in portrait with one thumb. Grim Jr. walks and fights on his own; you choose his skills, decide who to reap or spare, and build him up between shifts.</p></details>
+      <details><summary>When does it come out, and on what?</summary><p>No date yet. It is coming to the App Store for iPhone, and to Android. Leave your email below and you get one message when the doors open.</p></details>
+      <details><summary>How much will it cost?</summary><p>Not announced. The build in development has every real-money button switched off.</p></details>
+      <details><summary>Is it scary or sad?</summary><p>Neither. It is cute-spooky, and he is not worried about Dad at all. Nobody is hurt: everyone he meets is already dead and merely overdue. Defeated clients turn into a little soul that floats into his lantern.</p></details>
+      <details><summary>Why does he have no mouth?</summary><p>Because he does not need one. He says everything with his eyes, his hood and a small hop. It is the one rule nobody is allowed to break, including us.</p></details>
+      <details><summary>Is he Death's son?</summary><p>Yes. Dad went out for milk and left the scythe by the door.</p></details>
+      <details><summary>Where is Death?</summary><p>At the shop. He will be back in five minutes. That is what the note says and HR has no reason to doubt the note.</p></details>
+      <details><summary>Who is making it?</summary><p>ORY Studios. A very small team. Roughly intern-sized.</p></details>
+      <details><summary>How do I get help or report a problem?</summary><p>Email <a href="mailto:support@orynn.io">support@orynn.io</a>. Tell us your device and what happened. Never send a password or payment details.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="signup s-ink" id="signup">
+  <div class="notch" style="--c:var(--night)"></div>
+  <div class="wrap">
+    <div class="box">
+      <span class="placeholder">Opening soon</span>
+      <h2 style="margin-top:14px">Get the memo.</h2>
+      <p class="lede" style="margin-inline:auto">One email when the doors open. HR will not contact you about anything else. HR does not know how.</p>
+      <div class="form" role="group" aria-describedby="signup-note">
+        <input type="email" placeholder="you@example.com" aria-label="Email address (sign-ups are not open yet)" autocomplete="off">
+        <button type="button" disabled aria-disabled="true">Opening soon</button>
+      </div>
+      <p class="note" id="signup-note">Sign-ups are not open yet. Nothing you type here is saved or sent.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s-ink" id="links" style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Where to find the office</span>
+      <h2>Where to find us</h2>
+      <ul class="pills">
+        <li><span>App Store <em>coming soon</em></span></li>
+        <li><span>Google Play <em>coming soon</em></span></li>
+        <li><a href="https://www.youtube.com/channel/UCicF2tfvihn7ahWbzK9Pwtg" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+    <div id="press">
+      <span class="eyebrow">Press kit</span>
+      <h2>For writers and video makers</h2>
+      <ul class="pills">
+        <li><a href="assets/press/grim-jr-rise-logo.png" download>Logo</a></li>
+        <li><a href="assets/press/grim-jr-rise-logo-on-purple.png" download>Logo on purple</a></li>
+        <li><a href="assets/press/grim-jr-rise-logo-horizontal.png" download>Logo, one line</a></li>
+        <li><a href="assets/press/grim-jr-rise-keyart-1920x1080.jpg" download>Key art</a></li>
+        <li><a href="assets/press/grim-jr-rise-icon-512.png" download>Icon</a></li>
+      </ul>
+      <ul class="facts">
+        <li><b>Title:</b> Grim Jr. Rise!</li>
+        <li><b>Genre:</b> idle adventure roguelike</li>
+        <li><b>Platform:</b> iPhone (App Store) and Android</li>
+        <li><b>Release:</b> to be announced</li>
+        <li><b>Made by:</b> ORY Studios</li>
+        <li><b>Contact:</b> <a href="mailto:support@orynn.io">support@orynn.io</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/icon-180.png" width="180" height="180" alt="">
+    <div>
+      <p>Grim Jr. Rise! is in development. Grim Jr. and all characters shown are original to this game. © 2026 ORY Studios.</p>
+      <p>Support: <a href="mailto:support@orynn.io">support@orynn.io</a>. An ORY Studios game.</p>
+      <p>Privacy: this page sets no cookies, has no trackers or scripts, loads nothing from other sites and collects nothing.</p>
+      <p>Back in 5 minutes.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
